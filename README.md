@@ -56,14 +56,15 @@ dataset to answer several business related questions, among them are:
 - Are there any correlations between total sales and critic's reviews?
 - What is the most profitable genre?
 
-![Preview](Video Game Analysis/total_sales_per_platform.png "Product Range")
+![Preview](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/total_sales_per_platform.png "Product Range")
 
 Perform hypothesis testing to find
 
 
-![Preview](Video Game Analysis/distributions_of_score.png)
+![Preview](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/distributions_of_score.png)
 Tags
 
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/video_game_analysis.ipynb)
+
 
 
