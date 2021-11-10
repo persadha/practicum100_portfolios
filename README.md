@@ -20,4 +20,14 @@ to check the statistical significance between two groups
 in the dataset. Finally, recommendations were presented 
 in the last section of the notebook.
 
-[Link to project](KPI and Product Range Analysis/Evaluating_Sales_KPI_Product_Range_(P100).ipynb)
+[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/Evaluating_Sales_KPI_Product_Range_(P100).ipynb)
+
+***
+
+## Making Business Decision Based on Data
+The focis of this prokect is 
+
+In this data we did
+
+
+[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/Evaluating_Sales_KPI_Product_Range_(P100).ipynb)
