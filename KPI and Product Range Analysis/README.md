@@ -33,7 +33,7 @@ revenue
 ~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/monthly_revenue.png" alt="monthly_revenue" width="75%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/monthly_revenue.png" alt="monthly_revenue" width="100%"/>
 </p>
 
 From November 2018 to December 2019 the revenue grew around 3% with the highest groeth in November 2019 
@@ -62,37 +62,10 @@ at -0.66% level.
 
 #### Average check
 
-The average check is the number of invoices in a month divided by the number of paying customers. This indicator shows how many transactions per person made in a particular month.
-~~~python
-# Finding the number of invoices per month
-invoice = (clean_data
-           .groupby(['year', 'month', 'invoice_no'])
-           .agg({'quantity':'count', 'invoice_date':pd.Series.min})
-           .reset_index()
-           .query('quantity > 0')
-           .groupby(['year', 'month'])
-           .agg({'invoice_no':'count', 'invoice_date':'min'})
-           .reset_index()
-        )
-invoice['label'] = invoice['invoice_date'].dt.strftime('%Y-%m')
-invoice
-~~~
-
-
-~~~python
-# Finding the number of customers per month
-customer = (clean_data
-            .groupby(['year', 'month', 'customer_id'])
-            .agg({'invoice_no':'count', 'invoice_date':'min'})
-            .reset_index()
-            .query('invoice_no > 0')
-            .groupby(['year', 'month'])
-            .agg({'customer_id':'count', 'invoice_date':'min'})
-            .reset_index()
-            )
-customer['label'] = customer['invoice_date'].dt.strftime('%Y-%m')
-customer
-~~~
+The average check is the number of invoices in a month divided by the number of paying customers. 
+This indicator shows how many transactions per person made in a particular month.
+To find the number of invoices in amount, we first group the data by year, month, and invoice_no and 
+count only the number of invoices with quantity at least one.
 
 ~~~python
 # Merging the dataframes
@@ -103,6 +76,12 @@ check.columns = ['year', 'month', 'n_invoice', 'invoice_date', 'label', 'n_custo
 check['check'] = check['n_invoice']/check['n_customer']
 check
 ~~~
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/average_check.png" alt="average_check" width="100%"/>
+</p>
+
+The average check for the sales is 2.3 and currently at 2.3. The highest value recorded is on November 2019 with 3.71 
 
 #### ARPPU
 
