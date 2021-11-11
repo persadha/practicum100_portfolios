@@ -20,7 +20,7 @@ to check the statistical significance between two groups
 in the dataset. Finally, recommendations were presented 
 in the last section of the notebook.
 
-[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/Evaluating_Sales_KPI_Product_Range_(P100).ipynb)
+[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/)
 
 ***
 
@@ -30,14 +30,14 @@ The focis of this prokect is
 In this data we did
 
 
-[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/Evaluating_Sales_KPI_Product_Range_(P100).ipynb)
+[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/)
 
 ***
 ## Business Analysis
 
 
 
-[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/business_analyst_project.ipynb)
+[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/)
 
 ***
 ## Video Game Analysis
