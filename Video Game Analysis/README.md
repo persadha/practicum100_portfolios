@@ -14,6 +14,8 @@ Additional data preprocessing brought us to a conclusion that only 43% of the or
 
 ![Preview](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/data_snapshot.png)
 
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/data_snapshot.png" alt="drawing" width="50%"/>
+
 Our data exploration showed us that PlayStation2 was the platform that has the highest selling figures and made the
 highest revenue, with USD973 million. This figure is followed by XBox 360 and Nintendo 3DS. The top three games that 
 gave PlayStation 2 the highest revenue were 'Grand Theft Auto: San Andreas' (released in 2004), 'Grand Theft Auto: Vice City' (2002), and Gran Turismo 3: A-Spec' (2001).  
