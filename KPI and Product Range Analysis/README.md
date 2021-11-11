@@ -38,6 +38,7 @@ revenue
 ~~~
 
 <table>
+<tbody>
 <tr><th>Table 1 Heading 1 </th><th>Table 1 Heading 2</th></tr>
 <tr><td>
 
@@ -49,7 +50,9 @@ revenue
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_graph.png" alt="revenues_table" width="75%" align="center"/>
 
 
-</td></tr> </table>
+</td></tr> 
+</tbody>
+</table>
 
 
 
