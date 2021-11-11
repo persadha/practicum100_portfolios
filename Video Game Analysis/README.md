@@ -47,4 +47,4 @@ Finally, we drew some business recommendations based on our analysis for the fol
 - To gain more sales, we need to emphasize selling games from the Action, Shooter, and Role Playing genres as they are the top-selling genre in all regions.
 The hypothesis test indicates that the user's reviews between the Xbox One and PC genres are the same, and the user's reviews between the Action and Sports genres are different.
 
-The complete notebook can be found [here](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/video_game_analysis.ipynb)
+The complete notebook can be found [here](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/video_game_analysis.ipynb).
