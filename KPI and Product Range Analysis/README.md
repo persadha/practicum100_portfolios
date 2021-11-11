@@ -36,23 +36,15 @@ revenue = clean_data.groupby(['year', 'month']).agg({'revenue':'sum', 'invoice_d
 revenue['label'] = revenue['invoice_date'].dt.strftime('%Y-%m')
 revenue
 ~~~
-
-<table>
-<tr><td>
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_table.png" alt="revenues_graph.png" width="75%" lign="center"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_table.png" alt="revenues_graph.png" width="50%"/>
 </p>
 
+We plotted the graph
 
-</td><td>
-
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_graph.png" alt="revenues_table" width="100%" align="center"/>
-
-
-</td></tr> 
-</table>
-
-
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_graph.png" alt="revenues_table" width="50%"/>
+</p>
 
 
 #### Percent Growth
@@ -60,10 +52,13 @@ Percent Growth shows how much revenue changes every month in percentage
 compared to the previous month's revenue. A positive value means that we earn more income than last month. On the contrary, a negative value means we lost money. The figure is calculated by the change of revenue each month divided by the previous month's income
 <img src="percent_growth_graph.png" alt="revenue_table.png" width="50%"/>
 
+<p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/percent_growth_graphs.png" alt="percent_growth" width="50%"/>
-
+</p>
 
 #### Average check
+
+The average check is the number of invoices in a month divided by the number of paying customers. This indicator shows how many transactions per person made in a particular month.
 ~~~python
 # Finding the number of invoices per month
 invoice = (clean_data
@@ -106,6 +101,10 @@ check
 ~~~
 
 #### ARPPU
+
+Average Revenue Per Paying User (ARPPU) is the metric that shows how much money a single user makes. The figure is calculated by dividing the revenue by the number of paying customers per month.
+
+
 ~~~python
 arppu = pd.merge(revenue, customer, on=['year', 'month', 'invoice_date', 'label'], how='left')
 arppu.columns = ['year', 'month', 'revenue', 'invoice_date', 'label', 'growth', 'color', 'n_customer']
@@ -114,6 +113,8 @@ arppu
 ~~~
 
 #### ARPU
+
+Average Revenue Per Unit is the amount of money we can expect to receive from selling a single product. It is calculated by dividing the monthly revenue by the number of products sold in a month.
 ~~~python
 # Merging the dataframes and calculating the ARPU
 arpu = pd.merge(quantity, revenue, on=['year', 'month', 'invoice_date', 'label'], how='left')
