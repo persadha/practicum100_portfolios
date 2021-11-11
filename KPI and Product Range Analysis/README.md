@@ -37,8 +37,7 @@ revenue['label'] = revenue['invoice_date'].dt.strftime('%Y-%m')
 revenue
 ~~~
 
-<table>
-<tbody>
+
 <tr><td>
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_table.png" alt="revenues_graph.png" width="75%" lign="center"/>
@@ -51,8 +50,7 @@ revenue
 
 
 </td></tr> 
-</tbody>
-</table>
+
 
 
 
