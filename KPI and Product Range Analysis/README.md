@@ -33,7 +33,7 @@ revenue
 ~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/monthly_revenue.png" alt="monthly_revenue" width="50%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/monthly_revenue.png" alt="monthly_revenue" width="75%"/>
 </p>
 
 From November 2018 to December 2019 the revenue grew around 3% with the highest groeth in November 2019 
@@ -41,13 +41,24 @@ where the sales made $1,483,942 revenue. There were some periods where revenues 
 decline would be on December 2019 with -0.66% loss to $507470 which is a lso the current state of this metric.
 
 #### Percent Growth
-Percent Growth shows how much revenue changes every month in percentage 
-compared to the previous month's revenue. A positive value means that we earn more income than last month. On the contrary, a negative value means we lost money. The figure is calculated by the change of revenue each month divided by the previous month's income
-<img src="percent_growth_graph.png" alt="revenue_table.png" width="50%"/>
+Percent Growth shows how much revenue changes every month in percentage compared to the previous month's. 
+A positive value means that we earn more income than last month. In a same way, a negative value means 
+we lost money. The figure is calculated by the change of revenue each month divided by the previous 
+month's income.
+
+~~~python
+# Calculating percent growth
+revenue['growth'] = revenue['revenue'].pct_change().fillna(0)
+revenue['color'] = revenue['growth'].apply(lambda x: 'firebrick' if x < 0 else 'forestgreen')
+revenue
+~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/percent_growth_graphs.png" alt="percent_growth" width="50%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/percent_growth.png" alt="percent_growth" width="100%"/>
 </p>
+
+Despite having an average of 1% growth, the store saw 5.39% as the highest growth in December 2018. Currently the growth is
+at -0.66% level.
 
 #### Average check
 
