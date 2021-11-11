@@ -43,32 +43,9 @@ In this data we did
 ## Video Game Analysis
 _Keywords: SDA, EDA, hypothesis testing_
 
-This project works on a video games sales data that contains the sales
-of the number of sales of games from 31 different gaming platforms (PlayStation 2, 
-Nintendo DS, XBox 360, PC console, etc.) in north america, europe, japan, and other regions.
-The dataset also contains critic's and user's ratings for every game titles.
-
-After performing data preprocessing steps, I explored the 
-dataset to answer several business related questions, among them are:
-
-- What is the best-selling games of all time in all platforms?
-- Which platforms that are leading sales? 
-- Are there any correlations between total sales and critic's reviews?
-- What is the most profitable genre?
-
-<<<<<<< HEAD
-In the second opart of the project, I did hypotheses testings to get more insights from the data such as  
-if there any difference in user review score between two gaming platforms, or bewtween two different genres.
-
-=======
-![Preview](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/total_sales_per_platform.png "Product Range")
->>>>>>> 181a9bf0f151e590151d2637c406aee4203826de
-
-Perform hypothesis testing to find
-
-
-![Preview](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/distributions_of_score.png)
-Tags
+This project works on video games sales data that contains the number of sales of games from 31 different gaming platforms (PlayStation 2, 
+Nintendo DS, XBox 360, PC console, etc.) in North America, Europe, Japan, and other regions.
+We wanted to find out interesting business-related questions such as the best-selling games of all time, which platform is leading sales, and the most profitable genre in each region. We also wanted to find out how different users critics in different genres and platforms with hypotheses test.
 
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/video_game_analysis.ipynb)
 
