@@ -47,7 +47,7 @@ This project works on video games sales data that contains the number of sales o
 Nintendo DS, XBox 360, PC console, etc.) in North America, Europe, Japan, and other regions.
 We wanted to find out interesting business-related questions such as the best-selling games of all time, which platform is leading sales, and the most profitable genre in each region. We also wanted to find out how different users critics in different genres and platforms with hypotheses test.
 
-[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/video_game_analysis.ipynb)
+[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/)
 
 
 
