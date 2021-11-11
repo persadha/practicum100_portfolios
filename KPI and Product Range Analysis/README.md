@@ -33,9 +33,12 @@ revenue
 ~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_graph.png" alt="revenues_table" width="50%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/monthly_revenue.png" alt="monthly_revenue" width="50%"/>
 </p>
 
+From November 2018 to December 2019 the revenue grew around 3% with the highest groeth in November 2019 
+where the sales made $1,483,942 revenue. There were some periods where revenues were underperformed however the biggest 
+decline would be on December 2019 with -0.66% loss to $507470 which is a lso the current state of this metric.
 
 #### Percent Growth
 Percent Growth shows how much revenue changes every month in percentage 
