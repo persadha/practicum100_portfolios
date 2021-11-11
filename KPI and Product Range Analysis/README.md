@@ -2,33 +2,28 @@
 #### The final project of the Practicum100 Germany Data Analyst Bootcamp. 
 
 ### Description
-In this project, we were given sales data of 4223 items in a store for a single period (2018-2019).
-The dataset contains 541909 rows with 25900 unique invoice numbers, item quantity, and unit price for each item.
-We were asked to assess the sales performance by selecting and evaluating relevant key performance indicators (KPI).
-The KPI that we selected are:
+In this project, we were given sales data of 4,223 items in a store for a year period (2018-2019).
+The dataset contains of 541,909 rows with 25,900 unique invoice numbers, item quantities, their unit prices, among other 
+features. We were asked to assess the sales performance by selecting relevant key performance indicators (KPI) then 
+evaluate how they developed. For this purpose we selected the following metrics:
 - Monthly Revenue
 - Monthly Sales Growth
 - Average Check
-- Average Revenue Per Paying User
-- Average Revenue per Unit
+- Average Revenue Per Paying User (ARPPU)
+- Average Revenue Per Unit (ARPU)
 - Product Performance
 
-In the second part of the project, we evaluate the product range by grouping the items in categories then find which 
-products are usually sold
-by themselves and in bundles. We used a technique commonly used in NLP 
-called Topic Modelling to make the categories. Then we wanted to find 
-out whether the items usually sold in bundles generate more revenues 
-than those usually sold by themselves.
-
-The last part of the project was to build a simple recommender system 
-that can suggest to customers of what items they should purchase next.
+Then in the second part of the project, we evaluated the product range by grouping the items into several categories 
+then find which products that were usually sold by themselves or in bundles. We used a technique commonly used in NLP 
+called Topic Modelling to make the categories. Finally, we also wanted to find out whether the items usually sold in bundles 
+generate more revenues than those usually sold individually. The last part of the project was to build a simple recommender system that can suggest customers what items they should 
+buy next based on their past selections.
 
 ### KPI Analysis
-After data cleaning, we managed to maintain up to 97% of the original data. Hence, we could continue to analyse the KPIs.
 #### Monthly Revenue
 
-Monthly Revenue is the amount of money that we made from the sales 
-every month. We get the figure by multiplying the number of items 
+Monthly Revenue is the amount of money that we made from sales 
+every month. We got the figure by multiplying the number of items 
 sold on each invoice per month by the item's unit price.
 ~~~python
 # Finding the monthly revenue
@@ -36,11 +31,6 @@ revenue = clean_data.groupby(['year', 'month']).agg({'revenue':'sum', 'invoice_d
 revenue['label'] = revenue['invoice_date'].dt.strftime('%Y-%m')
 revenue
 ~~~
-<p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_table.png" alt="revenues_graph.png" width="50%"/>
-</p>
-
-We plotted the graph
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_graph.png" alt="revenues_table" width="50%"/>
