@@ -1,20 +1,53 @@
-Evaluating Sales KPI and Product Range Analysis
-The final project of the Practicum100 Germany Data Analyst Bootcamp. 
+# Evaluating Sales KPI and Product Range Analysis
+#### The final project of the Practicum100 Germany Data Analyst Bootcamp. 
 
-The project's main task was to do a KPI and project range analysis to see how sales are performing in a year. In this project, I used different techniques to clean and visualize the dataset. As a part of the task, we were asked to put the product items into larger groups. I used the Topic Modelling techniques to find the most common product categories using the item's description as an input. The final number of categories was chosen by evaluating the coherence value of a given range of the possible number of topics. I also did hypothesis testing to check the statistical significance between two groups in the dataset. Finally, recommendations were presented in the last section of the notebook.
+### Description
+In this project, we were given sales data of 4223 items in a store for a single period (2018-2019).
+The dataset contains 541909 rows with 25900 unique invoice numbers, item quantity, and unit price for each item.
+We were asked to assess the sales performance by selecting and evaluating relevant key performance indicators (KPI).
+The KPI that we selected are:
+- Monthly Revenue
+- Monthly Sales Growth
+- Average Check
+- Average Revenue Per Paying User
+- Average Revenue per Unit
+- Product Performance
 
+In the second part of the project, we evaluate the product range by grouping the items in categories then find which 
+products are usually sold
+by themselves and in bundles. We used a technique commonly used in NLP 
+called Topic Modelling to make the categories. Then we wanted to find 
+out whether the items usually sold in bundles generate more revenues 
+than those usually sold by themselves.
 
-![pyLDAviz](pyLDAviz_img.png "Product Range")
+The last part of the project was to build a simple recommender system 
+that can suggest to customers of what items they should purchase next.
 
-#### Revenue
+### KPI Analysis
+After data cleaning, we managed to maintain up to 97% of the original data. Hence, we could continue to analyse the KPIs.
+#### Monthly Revenue
+
+Monthly Revenue is the amount of money that we made from the sales 
+every month. We get the figure by multiplying the number of items 
+sold on each invoice per month by the item's unit price.
 ~~~python
 # Finding the monthly revenue
 revenue = clean_data.groupby(['year', 'month']).agg({'revenue':'sum', 'invoice_date':'min'}).reset_index()
 revenue['label'] = revenue['invoice_date'].dt.strftime('%Y-%m')
 revenue
 ~~~
+<img src="revenue_graphs.png" alt="revenue_table.png" width="50%"/>
+
+
+<img src="revenue_table.png" alt="revenue_table.png" width="50%"/>
 
 #### Percent Growth
+Percent Growth shows how much revenue changes every month in percentage 
+compared to the previous month's revenue. A positive value means that we earn more income than last month. On the contrary, a negative value means we lost money. The figure is calculated by the change of revenue each month divided by the previous month's income
+<img src="percent_growth_graph.png" alt="revenue_table.png" width="50%"/>
+
+<img src="percent_growth_graphs.png" alt="revenue_table.png" width="50%"/>
+
 
 #### Average check
 ~~~python
@@ -107,3 +140,10 @@ In November 2019, most of our customers bought Christmas decorations, which boos
 
 
 ## Product Range Analysis
+
+![pyLDAviz](pyLDAviz_img.png "Product Range")
+
+
+[Dashboard](https://public.tableau.com/app/profile/widianto.persadha/viz/KPI_16275523309270/Dashboard?publish=yes)
+
+
