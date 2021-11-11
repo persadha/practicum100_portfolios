@@ -56,16 +56,21 @@ dataset to answer several business related questions, among them are:
 - Are there any correlations between total sales and critic's reviews?
 - What is the most profitable genre?
 
+<<<<<<< HEAD
 In the second opart of the project, I did hypotheses testings to get more insights from the data such as  
 if there any difference in user review score between two gaming platforms, or bewtween two different genres.
 
+=======
+![Preview](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/total_sales_per_platform.png "Product Range")
+>>>>>>> 181a9bf0f151e590151d2637c406aee4203826de
 
 Perform hypothesis testing to find
 
 
-![Preview](Video Game Analysis/distributions_of_score.png)
+![Preview](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/distributions_of_score.png)
 Tags
 
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/video_game_analysis.ipynb)
+
 
 
