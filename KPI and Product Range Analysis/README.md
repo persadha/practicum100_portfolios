@@ -1,6 +1,6 @@
 # Evaluating Sales KPI and Product Range Analysis
 #### The final project of the Practicum100 Germany Data Analyst Bootcamp. 
-
+***
 ### Description
 In this project, we were given sales data of 4,223 items in a store for a year period (2018-2019).
 The dataset contains of 541,909 rows with 25,900 unique invoice numbers, item quantities, their unit prices, among other 
@@ -19,6 +19,7 @@ called Topic Modelling to make the categories. Finally, we also wanted to find o
 generate more revenues than those usually sold individually. The last part of the project was to build a simple recommender system that can suggest customers what items they should 
 buy next based on their past selections.
 
+***
 ### KPI Analysis
 #### Monthly Revenue
 
@@ -85,8 +86,8 @@ The average check for the sales is 2.3 and currently at 2.3. The highest value r
 
 #### ARPPU
 
-Average Revenue Per Paying User (ARPPU) is the metric that shows how much money a single user makes. The figure is calculated by dividing the revenue by the number of paying customers per month.
-
+Average Revenue Per Paying User (ARPPU) is the metric that shows how much money a single user makes. 
+The figure is calculated by dividing the revenue by the number of paying customers per month.
 
 ~~~python
 arppu = pd.merge(revenue, customer, on=['year', 'month', 'invoice_date', 'label'], how='left')
@@ -95,9 +96,18 @@ arppu['arppu'] = arppu['revenue']/arppu['n_customer']
 arppu
 ~~~
 
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/arppu.png" alt="arppu" width="100%"/>
+</p>
+
+The average ARPPU is 1115 and the highest ARPPU was found on November 2019 with 1883.
+
 #### ARPU
 
-Average Revenue Per Unit is the amount of money we can expect to receive from selling a single product. It is calculated by dividing the monthly revenue by the number of products sold in a month.
+Average Revenue Per Unit is the amount of money we can expect to receive from selling a single product. 
+It is calculated by dividing the monthly revenue by the number of products sold in a month.
+
+
 ~~~python
 # Merging the dataframes and calculating the ARPU
 arpu = pd.merge(quantity, revenue, on=['year', 'month', 'invoice_date', 'label'], how='left')
@@ -105,38 +115,62 @@ arpu['arpu'] = arpu['revenue']/arpu['quantity']
 arpu
 ~~~
 
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/arpu.png" alt="arpu" width="100%"/>
+</p>
+
+The sales generated a relatively stable revenue per unit, which on average is 1.82. There was a 
+relatively high figure in December 2018, where the ARPU was 2.21 points.
+
 #### Product Performance
-chart 1
-chart 2
-chart 3
+The product performnace is basically showing the number of top n products based on revenue.
 
 ~~~python
-# Merging the dataset
-kpi = pd.merge(arppu, check, on=['year', 'month', 'invoice_date', 'n_customer', 'label'], how='left')
-kpi = pd.merge(kpi, arpu, on=['year', 'month', 'invoice_date', 'label', 'growth', 'color', 'revenue'], how='left')
+def show_top(n_highest):
+    '''
+    Description:
+    Display of top n products based on revenue.
+    '''
+    result = (clean_data
+              .groupby(['stock_code', 'description'])
+              .sum()['revenue']
+              .sort_values(ascending=False)
+              .head(n_highest).reset_index()
+             )
+    fig, ax = plt.subplots(figsize=(10,round(n_highest*0.5)), dpi=75)
+    sns.barplot(data=result, y=result.description.map(lambda x: x.title()), x='revenue', color='teal', orient='h')
+    
+    for row in result.itertuples():
+        ax.text(row.revenue+10000,
+                row.Index,
+                s=round(row.revenue, 2), 
+                horizontalalignment='center',
+                verticalalignment='bottom')
+    plt.title('The Top {} Products Based on Revenue'.format(n_highest), fontdict={'size':16})
+    plt.xlabel('Revenue')
+    plt.xlim(0, result.revenue.max()+25000)
+    plt.ylabel('Item Name')
+    plt.show()
 
-# Rearranging the columns
-kpi = kpi[['year', 
-             'month', 
-             'invoice_date', 
-             'label', 
-             'n_customer', 
-             'revenue', 
-             'growth', 
-             'n_invoice', 
-             'quantity', 
-             'check', 
-             'arppu', 
-             'arpu']]
-kpi.head()
+# Showing the top 25 products
+show_top(25)
 ~~~
 
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/product_performance.png" alt="product_performance" width="100%"/>
+</p>
 
-We have calculated the monthly revenue, monthly growth, average check, average revenue per paying user (ARPPU), average revenue per unit (ARPU), and product performance. From the indicators, we learned that the sales performed very well; it scored 5.3% growth in December 2018 and kept growing until November 2019 where it reached the highest revenue of 1,483,943. The average revenue per paying unit (ARPPU) also scored the highest this month, with 1891 points. However, the following month showed an interesting phenomenon where sales dropped -0.66% and only earned 507,470. The average check and ARPPU also present a similar trend. The ARPU, on the other hand, is relatively steady throughout the year, with an average of 2.21 points. We have also displayed the top 3, 10, and 25 products based on revenue in the last section of this analysis.
+The above figures shows the 3, 10, and 25 top products based on the revenue. Among the top performers 
+are `Regency Cakestand 3 Tier`, `Paper Craft`, `Little Birdie`, and `White Hanging Heart T-Light Holder`.
 
-In November 2019, most of our customers bought Christmas decorations, which boost revenue. Furthermore, it also explains why the revenue dropped drastically in the following month.
+Three KPIs show that the most profitable month is November 2019, where it scored the highest 
+revenue, check, and ARPPU. After looking deeper into the data, we found that this trend was driven by 
+Christmas related items. Customers started to make Christmas decorations for gifts in November and bought 
+the supplies at this time of the year. 
+This also explains why the revenue in December 2018 dropped since all decorations or gifts supposedly are ready to be 
+sold, and fewer people look for these supplies.
 
-
+***
 ## Product Range Analysis
 
 ![pyLDAviz](pyLDAviz_img.png "Product Range")
