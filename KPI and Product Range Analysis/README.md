@@ -36,17 +36,18 @@ revenue = clean_data.groupby(['year', 'month']).agg({'revenue':'sum', 'invoice_d
 revenue['label'] = revenue['invoice_date'].dt.strftime('%Y-%m')
 revenue
 ~~~
-<img src="revenue_graphs.png" alt="revenue_table.png" width="50%"/>
 
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_table.png" alt="revenues_graph.png" width="50%"/>
 
-<img src="revenue_table.png" alt="revenue_table.png" width="50%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/revenue_graphs.png" alt="revenues_table" width="50%"/>
+
 
 #### Percent Growth
 Percent Growth shows how much revenue changes every month in percentage 
 compared to the previous month's revenue. A positive value means that we earn more income than last month. On the contrary, a negative value means we lost money. The figure is calculated by the change of revenue each month divided by the previous month's income
 <img src="percent_growth_graph.png" alt="revenue_table.png" width="50%"/>
 
-<img src="percent_growth_graphs.png" alt="revenue_table.png" width="50%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/percent_growth_graphs.png" alt="percent_growth" width="50%"/>
 
 
 #### Average check
