@@ -56,7 +56,9 @@ dataset to answer several business related questions, among them are:
 - Are there any correlations between total sales and critic's reviews?
 - What is the most profitable genre?
 
-![Preview](Video Game Analysis/total_sales_per_platform.png "Product Range")
+In the second opart of the project, I did hypotheses testings to get more insights from the data such as  
+if there any difference in user review score between two gaming platforms, or bewtween two different genres.
+
 
 Perform hypothesis testing to find
 
