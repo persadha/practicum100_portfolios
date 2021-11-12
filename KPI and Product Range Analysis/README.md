@@ -263,7 +263,7 @@ Therefore, we would need to name them manually later.
 We used pyLDAviz to visualize the results.
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/pyLDAviz_img.png.png" alt="pyLDAviz_img.png" width="80%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/pyLDAviz_img.png" alt="pyLDAviz_img.png" width="80%"/>
 </p>
 
 The visualization showed several bubbles and bars charts in the main window. Each bubble represents a 
