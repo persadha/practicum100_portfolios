@@ -34,7 +34,7 @@ revenue
 ~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/monthly_revenue.png" alt="monthly_revenue" width="90%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/monthly_revenue.png" alt="monthly_revenue" width="80%"/>
 </p>
 
 From November 2018 to December 2019 the revenue grew around 3% with the highest groeth in November 2019 
@@ -55,7 +55,7 @@ revenue
 ~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/percent_growth.png" alt="percent_growth" width="90%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/percent_growth.png" alt="percent_growth" width="80%"/>
 </p>
 
 Despite having an average of 1% growth, the store saw 5.39% as the highest growth in December 2018. Currently the growth is
@@ -79,7 +79,7 @@ check
 ~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/average_check.png" alt="average_check" width="90%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/average_check.png" alt="average_check" width="80%"/>
 </p>
 
 The average check for the sales is 2.3 and currently at 2.3. The highest value recorded is on November 2019 with 3.71 
@@ -97,7 +97,7 @@ arppu
 ~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/arppu.png" alt="arppu" width="90%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/arppu.png" alt="arppu" width="80%"/>
 </p>
 
 The average ARPPU is 1115 and the highest ARPPU was found on November 2019 with 1883.
@@ -116,7 +116,7 @@ arpu
 ~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/arpu.png" alt="arpu" width="75%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/arpu.png" alt="arpu" width="80%"/>
 </p>
 
 The sales generated a relatively stable revenue per unit, which on average is 1.82. There was a 
@@ -157,7 +157,7 @@ show_top(25)
 ~~~
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/product_performance.png" alt="product_performance" width="100%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/product_performance.png" alt="product_performance" width="80%"/>
 </p>
 
 The above figures shows the 3, 10, and 25 top products based on the revenue. Among the top performers 
