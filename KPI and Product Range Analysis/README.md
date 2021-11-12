@@ -187,7 +187,7 @@ from collections import Counter
 Counter(clean_data.query('is_bundle == True')['description']).most_common(5)
 ```
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/bundles.png" alt="bundles" width="50%"/>
 </p>
 
@@ -307,7 +307,7 @@ with the Gensim library.
 from gensim.models import CoherenceModel
 ```
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_score.png" alt="coherence_score.png" width="80%"/>
 </p>
 
