@@ -171,6 +171,28 @@ This also explains why the revenue in December 2018 dropped. All decorations and
 
 ***
 ## Product Range Analysis
+### Finding Items Commonly Sold In Bundles
+For this task, we use the fact that there were already keywords in the product's name that indicated 
+if an item are sold in group. Those words are `set of`, `box of`, `pack of`, `bundle of`.
+
+```python
+# Creating a boolean column to find a row that consist of the keywords
+keywords = ['box of', 'set of', 'pack of', 'bundle of']
+
+clean_data['is_bundle'] = (clean_data['description']
+                           .apply(lambda x: True if any(w in x for w in keywords) else False))
+
+
+from collections import Counter
+Counter(clean_data.query('is_bundle == True')['description']).most_common(5)
+```
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/bundles.png" alt="bundles" width="50%"/>
+</p>
+
+
+### Find Product Categories
 
 The dataset provided us with the item names under the `description` column. There was, however, no other 
 columns in the dataset that gave information which category an item belongs to. Consequently, we had to 
@@ -331,8 +353,8 @@ Plotting the coherence values,
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_plot.png" alt="coherence_plot.png" width="80%"/>
 </p>
 
-<p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_highest.png" alt="coherence_highest.png" width="80%"/>
+<p align="left">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_highest.png" alt="coherence_highest.png" width="50%"/>
 </p>
 
 Our iterative process suggested that selecting 26 topics give the best coherence score of around 60%. However, 
@@ -365,11 +387,18 @@ clean_data
 ```
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/product_categories.png" alt="product_categories.png" width="80%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/product_categories.png" alt="product_categories.png" width="90%"/>
 </p>
 
-Next, we managed to group the products into 10 categories using the Topic Modelling technique known in the Natural Language Processing domain. The method uses a Latent Dirichlet Allocation model that calculates the contribution of words in the item's description to each topic. We chose several topic numbers, evaluated them using the coherence model, and decided to use 10 topics/categories.
+Even though we picked 10 categories for the product range, our selection was far from perfect. 
+There were still many ways to improve our model, such as choosing a different hyperparameter, applying the 
+TF-IDF method, utilizing the Gensim LDA Mallet model as suggested by some references, or using the output 
+categories as target labels and run a supervised machine learning method to the dataset. However, due to 
+time restrictions, we kept these options as future recommendations. One caveat of the technique is that 
+the model does not assign the naming to the output topics/categories.
 
-Even though we picked 10 categories for the product range, our selection is far from perfect. 
-There are still many ways to improve our model, such as choosing a different hyperparameter, applying the TF-IDF method, utilizing the Gensim LDA Mallet model as suggested by some references, or using the output categories as target labels and run a supervised machine learning method to the dataset. However, due to time restrictions, we keep these options as a future recommendation. One caveat of the technique is that the model does not assign the naming to the output topics/categories.
 [Dashboard](https://public.tableau.com/app/profile/widianto.persadha/viz/KPI_16275523309270/Dashboard?publish=yes)
+
+
+## Hypothesis Testing
+This section focused on finding out 
