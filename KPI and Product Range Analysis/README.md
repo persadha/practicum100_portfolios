@@ -188,7 +188,7 @@ Counter(clean_data.query('is_bundle == True')['description']).most_common(5)
 ```
 
 <p align="left">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/bundles.png" alt="bundles" width="50%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/bundles.png" alt="bundles" width="60%"/>
 </p>
 
 
@@ -308,7 +308,7 @@ from gensim.models import CoherenceModel
 ```
 
 <p align="left">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_score.png" alt="coherence_score.png" width="80%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_score.png" alt="coherence_score.png" width="60%"/>
 </p>
 
 Our selection of 10 topics gave us around 58% coherence. To find the best number of categories, we 
@@ -354,7 +354,7 @@ Plotting the coherence values,
 </p>
 
 <p align="left">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_highest.png" alt="coherence_highest.png" width="50%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_highest.png" alt="coherence_highest.png" width="60%"/>
 </p>
 
 Our iterative process suggested that selecting 26 topics give the best coherence score of around 60%. However, 
@@ -396,6 +396,11 @@ TF-IDF method, utilizing the Gensim LDA Mallet model as suggested by some refere
 categories as target labels and run a supervised machine learning method to the dataset. However, due to 
 time restrictions, we kept these options as future recommendations. One caveat of the technique is that 
 the model does not assign the naming to the output topics/categories.
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/bundles_distributions.png" alt="bundles_distributions.png" width="90%"/>
+</p>
+
 
 [Dashboard](https://public.tableau.com/app/profile/widianto.persadha/viz/KPI_16275523309270/Dashboard?publish=yes)
 
