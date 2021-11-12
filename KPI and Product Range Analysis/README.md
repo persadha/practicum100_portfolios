@@ -263,7 +263,7 @@ Therefore, we would need to name them manually later.
 We used pyLDAviz to visualize the results.
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/pyLDAviz_img.png" alt="pyLDAviz_img.png" width="80%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/pyLDAviz.png" alt="pyLDAviz_img.png" width="80%"/>
 </p>
 
 The visualization showed several bubbles and bars charts in the main window. Each bubble represents a 
@@ -281,12 +281,95 @@ there are keywords found in more than one bubble.
 To evaluate how good our selection of the number of topics is, we use a coherence model metric that came 
 with the Gensim library.
 
-~~~python
+```python
 from gensim.models import CoherenceModel
-~~~
+```
 
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_score.png" alt="coherence_score.png" width="80%"/>
+</p>
 
+Our selection of 10 topics gave us around 58% coherence. To find the best number of categories, we 
+can repeat the modeling process with different value for number of topic and checked the resulting
+coherence value. In this case we started with the initial 2 topics then repeated the process until
+40 topics.
 
+```python
+np.random.seed(0)
+
+def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):
+    """
+    Description:
+    Compute c_v coherence for various number of topics
+
+    Inputs:
+    dictionary : Gensim dictionary
+    corpus : Gensim corpus
+    texts : List of input texts
+    limit : Max num of topics
+
+    Ouputs:
+    model_list : List of LDA topic models
+    coherence_values : Coherence values corresponding to the LDA model with respective number of topics
+    """
+    coherence_values = []
+    model_list = []
+    for num_topics in range(start, limit, step):
+        model = gensim.models.LdaMulticore(corpus=corpus, num_topics=num_topics, id2word=id2word)
+        model_list.append(model)
+        coherencemodel = CoherenceModel(model=model, texts=texts, dictionary=dictionary, coherence='c_v')
+        coherence_values.append(coherencemodel.get_coherence())
+
+    return model_list, coherence_values
+
+model_list, coherence_values = compute_coherence_values(dictionary=id2word, corpus=corpus, texts=words, start=2, limit=40, step=4)
+```
+
+Plotting the coherence values,
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_plot.png" alt="coherence_plot.png" width="80%"/>
+</p>
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_highest.png" alt="coherence_highest.png" width="80%"/>
+</p>
+
+Our iterative process suggested that selecting 26 topics give the best coherence score of around 60%. However, 
+since this value was not so much different that the one we got initially (58%) we will stick 10 product categories. 
+Surely it would help customers a lot by not confusing them with too many product groups.
+
+The final step is to assign the category to each item in the description column. We can use the model and corpus that 
+have been trained to assign the groupings.
+
+```python
+def topic_prediction(item):
+    '''
+    Description:
+    Find the topic the input text most associated with
+    
+    Parameters:
+    A string type text input
+    
+    Returns
+    The Topic with the highest probability
+    '''
+    text = preprocess(item)
+    corpus = id2word.doc2bow(text)
+    output = list(lda_model[corpus])
+    topics = sorted(output, key=lambda x: x[1], reverse=True)
+    return topics[0][0]
+
+clean_data['category'] = clean_data['description'].apply(topic_prediction)
+clean_data
+```
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/product_categories.png" alt="product_categories.png" width="80%"/>
+</p>
+
+Next, we managed to group the products into 10 categories using the Topic Modelling technique known in the Natural Language Processing domain. The method uses a Latent Dirichlet Allocation model that calculates the contribution of words in the item's description to each topic. We chose several topic numbers, evaluated them using the coherence model, and decided to use 10 topics/categories.
+
+Even though we picked 10 categories for the product range, our selection is far from perfect. 
+There are still many ways to improve our model, such as choosing a different hyperparameter, applying the TF-IDF method, utilizing the Gensim LDA Mallet model as suggested by some references, or using the output categories as target labels and run a supervised machine learning method to the dataset. However, due to time restrictions, we keep these options as a future recommendation. One caveat of the technique is that the model does not assign the naming to the output topics/categories.
 [Dashboard](https://public.tableau.com/app/profile/widianto.persadha/viz/KPI_16275523309270/Dashboard?publish=yes)
-
-
