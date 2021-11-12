@@ -167,8 +167,7 @@ Three KPIs show that the most profitable month is November 2019, where it scored
 revenue, check, and ARPPU. After looking deeper into the data, we found that this trend was driven by 
 Christmas related items. Customers started to make Christmas decorations for gifts in November and bought 
 the supplies at this time of the year. 
-This also explains why the revenue in December 2018 dropped since all decorations or gifts supposedly are ready to be 
-sold, and fewer people look for these supplies.
+This also explains why the revenue in December 2018 dropped. All decorations and gifts supposedly were already handed out and fewer people searched for these supplies.
 
 ***
 ## Product Range Analysis
