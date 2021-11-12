@@ -172,7 +172,119 @@ This also explains why the revenue in December 2018 dropped. All decorations and
 ***
 ## Product Range Analysis
 
-![pyLDAviz](pyLDAviz_img.png "Product Range")
+The dataset provided us with the item names under the `description` column. There was, however, no other 
+columns in the dataset that gave information which category an item belongs to. Consequently, we had to 
+consider other methods to help us in grouping the items.
+
+In the Natural Language Processing domain, a technique called Topic Modelling aims to discover the topic 
+in a collection of documents, which is in this case quite similar to our objective. The model uses the 
+method known as Latent Dirichlet Allocation (LDA), which assumes that a document consists of a collection 
+of topics in a certain proportion. And each topic is a collection of keywords in a certain proportion. 
+The method groups keywords based on the given suggested number of topics and calculate how much each 
+keyword contributes to a particular topic.
+
+We implemented Topic Modelling in this analysis with the help of a library called Gensim. We also used 
+In addition, we pyLDAviz for visualizing the categories produced by Gensim. 
+
+~~~python
+# Importing Gensim library
+import gensim
+from gensim import corpora, models
+from gensim.utils import simple_preprocess
+
+# Importing pyLDAviz for visualization
+import pyLDAvis
+import pyLDAvis.gensim_models
+~~~
+
+The steps that we took in the analysis were the following:
+1. Preprocessed the input text by tokenized the text into a smaller unit, removed the stop words, stemmed, and 
+lemmatized the remaining words.
+2. Created a Gensim dictionary and a corpus as a main input for the LDA model.
+3. Ran the LDA model by giving the model an initial guess of the number of topics, the dictionary, 
+and the corpus.
+4. Visualized the model output using pyLDAviz.
+5. Evaluated the model output by calculating the coherence model.
+6. Repeated the modeling part using a different number of topics until we found the best coherence model.
+
+To achieve the expected result we defined a function as follows:
+
+~~~python
+def get_corpus(df):
+    words = [preprocess(line) for line in df.description]
+    id2word = gensim.corpora.Dictionary(words)
+    
+    # Filter out any tokens that occur less than 10 times and no more that 35% of the corpus size
+    id2word.filter_extremes(no_below=10, no_above=0.35)
+    
+    # Removing any gaps
+    id2word.compactify()
+    
+    # Creating the corpus
+    corpus = [id2word.doc2bow(text) for text in words]
+    return corpus, id2word, words
+~~~
+
+Then feeded the item decriptions from the cleaned dataset as input to `get_corpus`.
+
+~~~python
+np.random.seed(0)
+
+# Creating a corpus and dictionary from the input text
+corpus, id2word, words = get_corpus(clean_data)
+~~~
+
+Finally, we ran the LDA model using the corpus and dictionary id2word from get_corpus. The model requires 
+prior knowledge of the number of topics the document might have. As an initial guess, we assumed that 
+there were 10 product categories.
+
+~~~python
+# Running the LDA model
+lda_model =  gensim.models.LdaMulticore(corpus, num_topics=10, id2word = id2word, passes=2, workers=2)
+
+from pprint import pprint
+
+# Visualizing outputs from the model
+for idx, topic in lda_model.print_topics(-1):
+    pprint('Topic: {} Words: {}'.format(idx, topic))
+~~~
+
+The LDA model gives out ten topics with the probability of words that makes up each topic. As an example, 
+in Topic 0 the 'light' keyword contributes 11.7% to the topic, 'heart' contributes 9%, 'decor' 8.5%, and 
+so on.
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/gensim_output.png" alt="gensim_output" width="80%"/>
+</p>
+
+One important thing to note is that the LDA model does not assign any title to the output topics. 
+Therefore, we would need to name them manually later.
+
+We used pyLDAviz to visualize the results.
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/pyLDAviz_img.png.png" alt="pyLDAviz_img.png" width="80%"/>
+</p>
+
+The visualization showed several bubbles and bars charts in the main window. Each bubble represents a 
+topic; the larger the bubble, the higher percentage of the words in the corpus is about that topic. 
+Blue bars represent the overall frequency of each word in the corpus. Red bars give the estimated number 
+of times a given topic generates a given term. For example, there are 40,000 counts of the word 'heart' 
+in the corpus, as indicated by the blue bar. Topic 4 generates around 22,000 of them and Topic 2 around 
+18,000, as shown by the red bars.
+
+Additionally, the further the bubbles are away from each other, the more different they are.
+
+The model gave us ten bubbles of the same size. Some bubbles intersected with the other, indicating that 
+there are keywords found in more than one bubble.
+
+To evaluate how good our selection of the number of topics is, we use a coherence model metric that came 
+with the Gensim library.
+
+~~~python
+from gensim.models import CoherenceModel
+~~~
+
 
 
 [Dashboard](https://public.tableau.com/app/profile/widianto.persadha/viz/KPI_16275523309270/Dashboard?publish=yes)
