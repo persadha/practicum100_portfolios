@@ -401,18 +401,18 @@ categories as target labels and run a supervised machine learning method to the 
 time restrictions, we kept these options as future recommendations. One caveat of the technique is that 
 the model does not assign the naming to the output topics/categories.
 
+## Hypothesis Testing
+On the last section we separated the items into two groups, the one that were commonly sold individually
+and those who were commonly sold in bundles. Now we would like to know if the two groups generate different 
+revenues. Plotting the revenues of both groups after removing the outliers showed us that the 
+distributions were skewed. 
+
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/bundles_distributions.png" alt="bundles_distributions.png" width="90%"/>
 </p>
 
 
-
-
-## Hypothesis Testing
-On the last section we separated the items into two groups, the one that were commonly sold individually
-and those who were commonly sold in bundles. Now we would like to know if the two groups generate different 
-revenues. Plotting the revenues of both groups after removing the outliers showed us that the 
-distributions were skewed. We confirmed this by testing the normalityt using the Shapiro-Wilk Normality Test
+We confirmed this by testing the normalityt using the Shapiro-Wilk Normality Test
 with the following hypothesis:
 
 - Null hypothesis,  𝐻_0 : The samples are from the normal (Gaussian) distribution.
@@ -458,7 +458,11 @@ else:
     print('between the average revenue of the `bundle` dataset and the `non_bundle` dataset. (reject H_0)')
 ```
 
-<p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/hypothesis_testing.png" alt="hypothesis_testing.png" width="50%"/>
+<p align="left">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/hypothesis_testing.png" alt="hypothesis_testing.png" width="90%"/>
 </p>
+
+The non-parametric test suggested that the two distributions were statistically different. Calculating the 
+revenues, the items sold individually generated an average of 10.57 while the average 
+revenues of items sold in bundles were 9.25.
 
