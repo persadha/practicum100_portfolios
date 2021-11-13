@@ -432,7 +432,7 @@ else:
 ```
 
 The p-values obtained after applying both groups to the function are less than 0.001. Therefore we 
-confirmed that both distributions were not Gaussian. Consequently we could not use the Student's t-Test 
+confirmed that both distributions were not Gaussian. Consequently, we could not use the Student's t-Test 
 for the hypothesis testing since the required assumption normally distributed samples was not satisfied.
 We used the non-parametric Mann-Whitney U Test instead and defined the following null and alternate 
 hypotheses:
@@ -567,3 +567,5 @@ We used the following references during the completion of this project:
 5. Kurt, S. (2020, Jul 1). Topic Modeling -- LDA Mallet Implementation in Python -- Part 3 [Blog Post]. Retrieved from https://medium.com/swlh/topic-modeling-lda-mallet-implementation-in-python-part-3-ab03e01b7cd7
 6. Dwivedi, R. (2020, April 16). What Are Recommendation Systems in Machine Learning [Blog Post]. Retrieved from https://www.analyticssteps.com/blogs/what-are-recommendation-systems-machine-learning
 7. Jeong, Y. (2021, April 21). Item-Based Collaborative Filtering in Python [Blog Post]. Retrieved from https://towardsdatascience.com/item-based-collaborative-filtering-in-python-91f747200fab
+
+The complete project be be viewed [here](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/Evaluating_Sales_KPI_Product_Range_(P100).ipynb).
