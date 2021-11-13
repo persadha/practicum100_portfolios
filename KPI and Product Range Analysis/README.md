@@ -169,6 +169,10 @@ Christmas related items. Customers started to make Christmas decorations for gif
 the supplies at this time of the year. 
 This also explains why the revenue in December 2018 dropped. All decorations and gifts supposedly were already handed out and fewer people searched for these supplies.
 
+
+We presented our finding in a Tableau dashboard which can be accessed [here](https://public.tableau.com/app/profile/widianto.persadha/viz/KPI_16275523309270/Dashboard?publish=yes).
+
+
 ***
 ## Product Range Analysis
 ### Finding Items Commonly Sold In Bundles
@@ -402,8 +406,16 @@ the model does not assign the naming to the output topics/categories.
 </p>
 
 
-[Dashboard](https://public.tableau.com/app/profile/widianto.persadha/viz/KPI_16275523309270/Dashboard?publish=yes)
 
 
 ## Hypothesis Testing
-This section focused on finding out 
+On the last section we separated the items into two groups, the one that were commonly sold individually
+and those who were commonly sold in bundles. Now we would like to know if the two groups generate different 
+revenues. Plotting the revenues of both groups after removing the outliers showed us that the 
+distributions were skewed. We confirmed this by testing the normalityt using the Shapiro-Wilk Normality Test
+with the following hypothesis:
+
+- Null hypothesis,  /$H_0$ : The samples are from the normal (Gaussian) distribution.
+- Alternate hypothesis  /$H_A$ : The samples are not from the normal (Gaussian) distribution.
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
