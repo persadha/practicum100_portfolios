@@ -569,4 +569,4 @@ We used the following references during the completion of this project:
 7. Jeong, Y. (2021, April 21). Item-Based Collaborative Filtering in Python [Blog Post]. Retrieved from https://towardsdatascience.com/item-based-collaborative-filtering-in-python-91f747200fab
 
 The complete notebook can be accessed [here](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/Evaluating_Sales_KPI_Product_Range_(P100).ipynb) and 
-the KPI dashboard can be viewed [here](https://public.tableau.com/app/profile/widianto.persadha/viz/KPI_16275523309270/Dashboard?publish=yes).
+the KPI dashboard can be viewed on this [link](https://public.tableau.com/app/profile/widianto.persadha/viz/KPI_16275523309270/Dashboard?publish=yes).
