@@ -188,7 +188,7 @@ Counter(clean_data.query('is_bundle == True')['description']).most_common(5)
 ```
 
 <p align="left">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/bundles.png" alt="bundles" width="60%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/bundles.png" alt="bundles" width="50%"/>
 </p>
 
 
@@ -308,7 +308,7 @@ from gensim.models import CoherenceModel
 ```
 
 <p align="left">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_score.png" alt="coherence_score.png" width="60%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_score.png" alt="coherence_score.png" width="50%"/>
 </p>
 
 Our selection of 10 topics gave us around 58% coherence. To find the best number of categories, we 
@@ -354,7 +354,7 @@ Plotting the coherence values,
 </p>
 
 <p align="left">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_highest.png" alt="coherence_highest.png" width="60%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/coherence_highest.png" alt="coherence_highest.png" width="50%"/>
 </p>
 
 Our iterative process suggested that selecting 26 topics give the best coherence score of around 60%. However, 
