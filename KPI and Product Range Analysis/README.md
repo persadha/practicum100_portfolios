@@ -459,10 +459,111 @@ else:
 ```
 
 <p align="left">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/hypothesis_testing.png" alt="hypothesis_testing.png" width="90%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/hypothesis_testing.png" alt="hypothesis_testing.png" width="100%"/>
 </p>
 
 The non-parametric test suggested that the two distributions were statistically different. Calculating the 
 revenues, the items sold individually generated an average of 10.57 while the average 
 revenues of items sold in bundles were 9.25.
 
+***
+
+### Recommender System
+As additional task, we built a simple recommender system. The model was inspired by a method known as 
+Item-Based Collaborative Filtering. The system assumes that customers who purchased the same item are 
+more likely to look for similar items. Concretely, when a customer puts an item A in the shopping cart, 
+the system shows the list of other top items other customers who ordered item A bought in the past. 
+As a simple example, if a person is looking for a birthday decoration set, the person will likely buy a 
+party balloon.
+
+Details of the implementation can be seen in the notebook. We came up with the following function:
+```python
+def recommender(item, df, n_customer=5, n_product=5, n_recommendation=5):
+    # First the RS finds the top n customer who bought the same item
+    top_customers = (df
+                     .groupby(['stock_code', 'customer_id'])
+                     .count()
+                     .loc[item]
+                     .sort_values(by='invoice_no', ascending=False)
+                    )
+
+    # For each of these customers, find the top n items that they bought
+    recommended = {}
+    for customer in top_customers[:n_customer].index:
+        top_products = (df
+                        .query('customer_id == @customer')
+                        .groupby('stock_code')
+                        .count()
+                        .sort_values(by='invoice_no', ascending=False)
+                        .reset_index()[['stock_code', 'invoice_no']]
+                       )
+        for product, invoice in zip(top_products.stock_code, top_products.invoice_no):
+            if product != item:
+                if product in recommended.keys():
+                    recommended[product] += invoice
+                else:
+                    recommended[product] = invoice
+    
+    recommended_df = (pd.DataFrame(list(recommended.items()), 
+                                  index=list(range(len(recommended))), 
+                                  columns=['stock_code', 'count'])
+                      .sort_values(by='count', ascending=False)
+                      .head(n_product))
+    
+    recommended_df['name'] = (recommended_df['stock_code']
+                              .apply(lambda x, df: df[df['stock_code'] == x]['description']
+                                     .iloc[0]
+                                     .title(), 
+                                     df=df))
+    
+    if len(recommended_df) <= n_recommendation:
+        n_recommendation = len(recommended_df)
+    return recommended_df.sort_values(by='count', ascending=False)[['name', 'stock_code']].head(n_recommendation)
+```
+
+Taking one sample to test the system,
+
+```python
+sample_item = clean_data.sample(1)['stock_code'].item()
+
+sample_name = (clean_data
+               .query('stock_code == @sample_item')['description']
+               .iloc[0]
+               .title())
+print('Item in cart:\nName: {}\nCode: {}\n'.format(sample_name, sample_item))
+
+print('Recommended Items:')
+print('Other customers who bought {} also bought these items: '.format(sample_name))
+recommender(sample_item, clean_data)
+```
+
+<p align="left">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/bundles_distributions.png" alt="bundles_distributions.png" width="100%"/>
+</p>
+
+There were many rooms for improvement for this recommender system. We can implement
+other established techniques such as the simple content-based method or user-based 
+collaborative, to the more advanced method using a deep neural network. One of the reasons that prevent 
+us from following the procedure entirely is that our dataset doesn't have user ratings to calculate the 
+similarity factor required in collaborative filtering.
+***
+### Recommendations 
+
+Concluding this project we provided the following recommendations that we can infer from on the analyses above:
+
+- We found out that Christmas-related items helped us gain the highest revenue in a year from the KPI analysis. Therefore we need to make sure that next year these items are ready in stock before November.
+- The high revenue in November can indicate that most customers associate us with Christmas/holiday decorations. We need to change this image, so customers come to us in any season of the year. This strategy might also help us to avoid such a drastic drop in revenue in December.
+- The product categorization can be improved by choosing a different hyperparameter, applying the TF-IDF method, or the LDA Mallet model. - Even further, we can find a labeling method then implement supervised learning models.
+- The items sold individually generate more revenues since some of these items might have an already high unit price. Therefore, we can focus on advertising these items to boost sales.
+- Find a way to get user ratings of our products to build a better recommender system.
+***
+### References 
+We used the following references during the completion of this project:
+
+1. Wikipedia. "Topic Model."  Last edited on November 1, 2019. https://en.wikipedia.org/wiki/Topic_model
+2. Chen, E. (2011, August 22). Introduction to Latent Dirichlet Allocation [Blog Post]. Retrieved from  http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/
+3. Li, S. (2018, May 31). Topic Modelling and Latent Dirichlet Allocation (LDA) in Python [Blog Post]. Retrieved from https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24
+4. Ganegedara, T. (2018, August 23). Intuitive Guide to Latent Dirichlet Allocation [Blog Post]. Retrieved from https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-latent-dirichlet-allocation-437c81220158
+5. Kurt, S. (2020, Jul 1). Topic Modeling -- LDA Mallet Implementation in Python -- Part 3 [Blog Post]. Retrieved from https://medium.com/swlh/topic-modeling-lda-mallet-implementation-in-python-part-3-ab03e01b7cd7
+6. Dwivedi, R. (2020, April 16). What Are Recommendation Systems in Machine Learning [Blog Post]. Retrieved from https://www.analyticssteps.com/blogs/what-are-recommendation-systems-machine-learning
+7. Jeong, Y. (2021, April 21). Item-Based Collaborative Filtering in Python [Blog Post]. Retrieved from https://towardsdatascience.com/item-based-collaborative-filtering-in-python-91f747200fab
