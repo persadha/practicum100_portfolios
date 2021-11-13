@@ -415,7 +415,50 @@ revenues. Plotting the revenues of both groups after removing the outliers showe
 distributions were skewed. We confirmed this by testing the normalityt using the Shapiro-Wilk Normality Test
 with the following hypothesis:
 
-- Null hypothesis,  /$H_0$ : The samples are from the normal (Gaussian) distribution.
-- Alternate hypothesis  /$H_A$ : The samples are not from the normal (Gaussian) distribution.
+- Null hypothesis,  𝐻_0 : The samples are from the normal (Gaussian) distribution.
+- Alternate hypothesis  𝐻_𝐴 : The samples are not from the normal (Gaussian) distribution.
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+```python
+from scipy.stats import shapiro
+
+_, p_value = shapiro(items_group)
+
+alpha = 0.05
+if p_value > alpha:
+    print('The samples of `item_groups` dataset are from the normal (Gaussian) distribution (fail to reject H_0).')
+else:
+    print('The samples of `item_groups` dataset are not from the normal (Gaussian) distribution (reject H_0).')
+
+```
+
+The p-values obtained after applying both groups to the function are less than 0.001. Therefore we 
+confirmed that both distributions were not Gaussian. Consequently we could not use the Student's t-Test 
+for the hypothesis testing since the required assumption normally distributed samples was not satisfied.
+We used the non-parametric Mann-Whitney U Test instead and defined the following null and alternate 
+hypotheses:
+
+- Null hypothesis,  𝐻_0 : There is no statistically significant difference between the average revenue 
+of the bundle dataset and the non_bundle dataset.
+- Alternate hypothesis  𝐻_𝐴 : There exists a statistically significant difference between the average 
+revenue of the bundle dataset and the non_bundle dataset.
+
+```python
+from scipy.stats import mannwhitneyu
+
+# Hypothesis testing using the non-parametric method
+_, p_value = mannwhitneyu(bundled, non_bundled)
+print('Mann Whitney p-value {}'.format(p_value))
+
+alpha = 0.05
+if p_value > alpha:
+    print('There is no statistically significant difference between')
+    print('the average revenue of the `bundle` dataset and the `non_bundle` dataset (fail to reject H_0)')      
+else:
+    print('There exists a statistically significant difference')
+    print('between the average revenue of the `bundle` dataset and the `non_bundle` dataset. (reject H_0)')
+```
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/images/hypothesis_testing.png" alt="hypothesis_testing.png" width="50%"/>
+</p>
+
