@@ -1,8 +1,45 @@
-# Making Business Decision Based On Data
+# Business Analysis
 
-## Introduction
+## Overview
+This project focuses on analyzing data in business setting. The data that we had at hand was marketing 
+expenses statistics, server logs from June 2017 to May 2018, and orders for the period. Given these data we 
+would like to know how people uset the porduct, when they start to buy, how much money eah customer brings,
+and when they pay off.
 
-The first analysis we would like to find out is how many people visited our site and how the user spend their time in the site.
+After prprocessing the data, we get the `visit`, `orders`, `cost` tables. 
+
+The `visit` table contains of ???
+
+```python
+visit.sample(5)
+```
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/visit.png" alt="visit" width="80%"/>
+</p>
+
+
+The `order` table contains of ???
+
+```python
+order.sample(5)
+```
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/order.png" alt="order" width="80%"/>
+</p>
+
+
+The `cost` table contains of ???
+
+```python
+cost.sample(5)
+```
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/cost.png" alt="cost" width="80%"/>
+</p>
+
+#### Product
+The first point we want knpw is how many people use it every day? This is the first metric that show how 
+customer engage with our product. We can analyze for each day, week, or month. 
 
 #### Daily Average Users
 ```python
@@ -63,6 +100,28 @@ On average, we can expect 23,228 visitors per month. The WAU graphs agree with t
 discussed earlier. Toward the end of the year, the number of visitors increased. The graphs peaked in 
 November 2017, where Black Friday takes place.
 
+One user maight have more than one session. We need to count how many sessions are there per day
+
+One importaant metric to find out is how often do users come back?
+		
+####		Sales
+    * 		When do people start buying? (In KPI analysis, we're usually interested in knowing the time that elapses between registration and conversion — when the user becomes a customer. For example, if registration and the first purchase occur on the same day, the user might fall into category Conversion 0d. If the first purchase happens the next day, it will be Conversion 1d. You can use any approach that lets you compare the conversions of different cohorts, so that you can determine which cohort, or marketing channel, is most effective.)
+    * 		How many orders do they make during a given period of time?
+    * 		What is the average purchase size?
+    * 		How much money do they bring? (LTV)	
+
+####		Marketing
+    * 		How much money was spent? Overall/per source/over time
+    * 		How much did customer acquisition from each of the sources cost?
+    * 		How worthwhile where the investments? (ROI)
+* 		
+Plot graphs to display how these metrics differ for various devices and ad sources and how they change in 
+time.
+
+
+Step 3. Write a conclusion: advise marketing experts how much money to invest and where.
+What sources/platforms would you recommend? Back up your choice: what metrics did you focus on? Why? What conclusions did you draw after finding the metric values?
+
 #### Sticky Factor per Week
 ```python
 # Merging dau with wau
@@ -90,3 +149,8 @@ sticky_factor_month.head()
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/sticky_factors_week.png" alt="sticky_factors_month" width="80%"/>
 </p>
+
+
+#### Retention Rate
+In this section, we want to know the retention rate of our users. The retention rate is defined as the number of active users at different periods divided by the initial size of the same group. To find the retention rate, we must find the first time each user visited the site and put them into the same group. We then calculate the size of each group. Since we have data for a year, we can form a monthly cohort to understand the data easier. Hence we are going to calculate how many users each cohort visited the website after their initial visit.
+
