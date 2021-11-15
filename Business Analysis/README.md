@@ -82,6 +82,48 @@ mau = visits.groupby(['year', 'month']).agg({'uid':'nunique'}).reset_index()
 
 On average, we can expect 23,228 visitors per month. The WAU graphs agree with the weekly trend we discussed earlier. Toward the end of the year, the number of visitors increased. The graphs peaked in November 2017, where Black Friday takes place.
 
+#### Sessions per Day
+One user can visit the website more than once. With that in mind, we would like to know how many sessions per day from all users. 
+
+```python
+session = visits.groupby(['year', 'month', 'day']).agg({'uid':'count'}).reset_index()
+```
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/daily_sessions.png" alt="daily_sessions" width="70%"/>
+</p>
+
+The number of sessions per day is 987.4
+
+Previously we found out that the number of unique daily users is 908 visitors. On the other hand, the average daily session is 987.4. We can calculate the ratio of n_unique visitors and the daily session and see how it behaves throughout the year.
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/daily_sessions_ratio.png" alt="daily_sessions_ratio" width="70%"/>
+</p>
+
+Generally, the ratio of sessions over the visit is 1.08. In other words, eight users visit the website two times in one hundred users. This is a pretty small amount, so we can confidently say that users only see the site once on regular days. However, during high season the percentage could reach 1.22.
+
+Looking at the heatmap above, we see that ad source #3, #4, and #5 brought the most visitors to the site. At the end of the year, source #4 made the highest visit with 13144 sessions. On the other hand, source #7 performed poorly by attracting not more than nine sessions in a month.
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/sessions_per_source.png" alt="sessions_per_source" width="70%"/>
+</p>
+
+#### How Often Do Users Come Back (Retention Rate)
+
+The retention rate is defined as the number of active users at different periods divided by the initial 
+size of the same group. This metric is particulary useful if we offer a subscribtion based service. It can give
+us hint of how loyal our customers are
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/retention.png" alt="retention" width="70%"/>
+</p>
+
+
+The second-week retention for the first six weeks shows a relatively stable trend, despite the drop in Jul-17, with at least a 7.7% rate. At the beginning of the new year, the retention rate dropped around 2 percent lower to the level between 4.2-6.0%. The end of the festive season might cause this decrease where people returned to their normal daily activities.
+
+The retention rate heatmap shows us that most cohorts increased their rate in the 2nd month. Additionally, although not valid for every cohort, generally, the retention rate rises steadily, especially for end-of-year cohorts where the number of retention improves.
+
+#### When Do People Start Buying (Conversion Rate)
 
 
 ***
@@ -137,5 +179,4 @@ sticky_factor_month.head()
 
 
 #### Retention Rate
-In this section, we want to know the retention rate of our users. The retention rate is defined as the number of active users at different periods divided by the initial size of the same group. To find the retention rate, we must find the first time each user visited the site and put them into the same group. We then calculate the size of each group. Since we have data for a year, we can form a monthly cohort to understand the data easier. Hence we are going to calculate how many users each cohort visited the website after their initial visit.
-
+In this section, we want to know the retention rate of our users. 
