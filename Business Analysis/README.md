@@ -1,13 +1,13 @@
 # Business Analysis
 
 ## Overview
-This project focuses on analyzing metrics in business. The data that we had in hand were marketing expenses, server logs from June 2017 to May 2018, and orders for the period. Given these data, we would like to know various questions that are related to our sales performance, such as how people use the product, when they start to buy, how much money each
+This project focuses on analyzing metrics in an ad campaign. The data that we had in hand were marketing expenses, server logs from June 2017 to May 2018, and orders for the period. Given these data, we would like to know how effective is our advertisement strategy and how much revenue it generates. We would also like to answer related questions such as know how people use the product, when they start to buy, how much money each
 customer brings, and when they pay off.
 
 Our analysis started with the data preprocessing step that included replacing missing values, removing duplicates, and converting data types.
 We got the three tables `visit`, `orders`, `cost` resulting from data cleaning. 
 
-The `visit` table contains logs of when users started logging in and when they ended the session, their user's id, and which device they used when logging in.
+The `visit` table contains logs of when users started logging in and when they ended the session, their user's id, and from which ad source they came to our site.
 
 ```python
 visit.sample(5)
@@ -22,30 +22,27 @@ The `order` table shows users transaction, date of purchase and the revenue they
 order.sample(5)
 ```
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/order.png" alt="order" width="60%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/order.png" alt="order" width="40%"/>
 </p>
 
-The `cost` table contains of ???
+Lastly, the `cost` table shows the marketing expenses spent for each ad source,
 
 ```python
 cost.sample(5)
 ```
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/cost.png" alt="cost" width="80%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/cost.png" alt="cost" width="40%"/>
 </p>
 
-#### Product
-The first point we want knpw is how many people use it every day? This is the first metric that show how 
-customer engage with our product. We can analyze for each day, week, or month. 
+***
+#### Daily, Weekly, Monthly Average Users
+The first questions that we would like to kno is how many people use it every day, week , and month. By grouping 
+the `visit` dataset by its unique users we can create a daily average users
 
-#### Daily Average Users
 ```python
 # Grouping the dataframe on week and calculating the number of unique users
 dau = visits.groupby(['year', 'month', 'day']).agg({'uid':'nunique'}).reset_index()
 
-# Renaming the columns
-dau.columns = ['year', 'month', 'day', 'n_user_day']
-dau.head()
 ```
 
 <p align="center">
