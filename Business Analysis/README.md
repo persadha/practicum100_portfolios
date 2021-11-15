@@ -125,58 +125,129 @@ The retention rate heatmap shows us that most cohorts increased their rate in th
 
 #### When Do People Start Buying (Conversion Rate)
 
-
-***
-One user maight have more than one session. We need to count how many sessions are there per day
-
-One importaant metric to find out is how often do users come back?
-		
-####		Sales
-    * 		When do people start buying? (In KPI analysis, we're usually interested in knowing the time that elapses between registration and conversion — when the user becomes a customer. For example, if registration and the first purchase occur on the same day, the user might fall into category Conversion 0d. If the first purchase happens the next day, it will be Conversion 1d. You can use any approach that lets you compare the conversions of different cohorts, so that you can determine which cohort, or marketing channel, is most effective.)
-    * 		How many orders do they make during a given period of time?
-    * 		What is the average purchase size?
-    * 		How much money do they bring? (LTV)	
-
-####		Marketing
-    * 		How much money was spent? Overall/per source/over time
-    * 		How much did customer acquisition from each of the sources cost?
-    * 		How worthwhile where the investments? (ROI)
-* 		
-Plot graphs to display how these metrics differ for various devices and ad sources and how they change in 
-time.
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/user_conversion.png" alt="user_conversion" width="70%"/>
+</p>
 
 
-Step 3. Write a conclusion: advise marketing experts how much money to invest and where.
-What sources/platforms would you recommend? Back up your choice: what metrics did you focus on? Why? What conclusions did you draw after finding the metric values?
+#### How Many Orders In A Given Period of Time?
 
-#### Sticky Factor per Week
 ```python
-# Merging dau with wau
-sticky_factor_week = pd.merge(dau_with_week, wau, on=['year','week'])
+# Calculating number of purchase per customer
+(print('The average order per customer is {:.2f}'
+       .format(orders.groupby('uid').count()['buy_ts'].sum()/ 
+               orders.groupby('uid').count()['buy_ts'].shape[0])))
 
-sticky_factor_week['sf_per_week'] = (sticky_factor_week['n_user_day']/sticky_factor_week['n_user_week'])*100
-sticky_factor_week.head()
 
 ```
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/sticky_factors_week.png" alt="sticky_factors_week" width="80%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/average_order.png" alt="average_order" width="70%"/>
 </p>
+The average order per customer is 1.38
 
-
-#### Sticky Factor per Month
-```python
-# Sticky factor per week (SFPW)
-sticky_factor_month = pd.merge(dau, mau, on='month')
-
-sticky_factor_month['sf_per_month'] = (sticky_factor_month['n_user_day']/sticky_factor_month['n_user_month'])*100
-sticky_factor_month.head()
-```
+The daily heatmap shows that daily orders are usually at around 1.08-1.10 rate. However, there are days that the rate increased to above 1.20 in August-17 and March-18.
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/sticky_factors_week.png" alt="sticky_factors_month" width="80%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/daily_order.png" alt="daily_order" width="70%"/>
 </p>
 
 
-#### Retention Rate
-In this section, we want to know the retention rate of our users. 
+The daily heatmap shows that daily orders are usually at around 1.08-1.10 rate. However, there are days that the rate increased to above 1.20 in August-17 and March-18.
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/weekly_order.png" alt="weekly_order" width="70%"/>
+</p>
+
+
+
+The weekly heatmap shows the peak, 48.11 orders per customer at the 8th week of 2018. That occurred at Feb 19-25, 18.
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/monthly_order.png" alt="monthly_order" width="70%"/>
+</p>
+
+#### Lifetime Value (LTV)
+
+LTV is a ....
+
+
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/LTV.png" alt="LTV" width="70%"/>
+</p>
+
+
+#### How much money was spent? Overall/per source/over time
+This time we are looking at the `marketing` table
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/monthly_costs.png" alt="monthly_costs" width="70%"/>
+</p>
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/source_costs.png" alt="source_source" width="70%"/>
+</p>
+
+#### How much did customer acquisition from each of the sources cost (Customer Acquisition Costs)?
+
+CAC Source
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/CAC_source.png" alt="CAC_source" width="70%"/>
+</p>
+
+CAC Cohort
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/CAC_cohort.png" alt="CAC_cohort" width="70%"/>
+</p>
+
+
+#### How worthwhile where the investments? (ROMI)
+
+To find the ROI, or rather, ROMI (Return On Marketing Investment), we merge two dataframes that have cac and ltv columns which are cac and source dataframes,
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/ROMI_cohort.png" alt="ROMI_cohort" width="70%"/>
+</p>
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/ROMI_source.png" alt="ROMI_source" width="70%"/>
+</p>
+
+
+
+
+Conclusion
+In this step, we found the following findings:
+
+Regarding user's visit:
+On average, there are 908 unique visits per day, 5716 per week, and 23228 per month.
+On the other hand, we can expect 987 sessions per day.
+There was a significant increase in a visit during the end-of-year holiday, particularly on Black Friday
+Most customers came to the site through ad source #3, #4, #5, and most of them using the desktop-based web interface.
+On average, users spends 10.7 minutes on the site
+There was a sudden drop in session length and daily visit indicating a problem on our end, possibly a server problem
+The cohorts formed at the end of the year, especially Dec-17, have the best user retention rate.
+Regarding sales:
+Among all visitors, only 16% converted into buying customers. Mor than half of them converted at 0 days, and the highest cohort that has 0d conversion was the Oct-17 cohort
+In terms of as source, source #3 and #4 had the highest 0d conversion
+The Jun-17 cohort consistently produces a high volume of orders even until its 9th month. Another cohort that potentially able to match them is the Mar-18 cohort.
+Ad source #1 and #2 produced large orders when compares to other sources.
+The cohort that has the highest LTV is the Jun-17 followed by Sep-17 cohort, while source #1 and source #2 also generated high LTV score with 320 and 360, respectively
+Regarding marketing:
+The overall marketing cost in a year is USD329131. Most of them are used by ad source #3.
+By evaluating the LTVs and CACs, we found out that ad source #1 and #2 are the most profitable, with ROMI of USD339 and USD1818, respectively.
+Step 4: General Conclusion
+We have learned from the analyses done in the previous step that the most profiting ad source is source #1. The source generated the highest return of investment (ROMI), USD339.94, with the lowest Customer Acquisition Costs (CAC), USD0.09 per user, and produced large volume orders. Ad source #2 also has a similar performance as #1, although on a smaller scale. On the other hand, source #3 has not been performing very well. Source #3 generated USD3.2 per user CAC, with the LTV only USD22, far below source #1 and #2.
+
+No cohorts that have ROMI greater than 1 which indicate we haven't generated enough revenue to cover the marketing costs. Only two cohorts, Jun-17 and Sep-17 have the highest ROMI 0.53 and 0.59 respectively.
+
+Hence, we recommend that marketing experts focus on ad sources #1 and #2 to increase revenue. It would be advisable to reallocate the marketing budget from source #3 to allow source v #1 to attract more customers.
+
+We would also like to suggest that the best time to launch the marketing campaign is from October to March, where user visits peaked.
+
+Black Friday is a unique date. In many of our metrics, the value around and on this day increased almost three times. So it is worthwhile to give extra attention to attract more users on this day
+
+
+
