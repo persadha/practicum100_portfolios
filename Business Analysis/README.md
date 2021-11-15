@@ -1,32 +1,29 @@
 # Business Analysis
 
 ## Overview
-This project focuses on analyzing data in business setting. The data that we had at hand was marketing 
-expenses statistics, server logs from June 2017 to May 2018, and orders for the period. Given these data we 
-would like to know how people uset the porduct, when they start to buy, how much money eah customer brings,
-and when they pay off.
+This project focuses on analyzing metrics in business. The data that we had in hand were marketing expenses, server logs from June 2017 to May 2018, and orders for the period. Given these data, we would like to know various questions that are related to our sales performance, such as how people use the product, when they start to buy, how much money each
+customer brings, and when they pay off.
 
-After prprocessing the data, we get the `visit`, `orders`, `cost` tables. 
+Our analysis started with the data preprocessing step that included replacing missing values, removing duplicates, and converting data types.
+We got the three tables `visit`, `orders`, `cost` resulting from data cleaning. 
 
-The `visit` table contains of ???
+The `visit` table contains logs of when users started logging in and when they ended the session, their user's id, and which device they used when logging in.
 
 ```python
 visit.sample(5)
 ```
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/visit.png" alt="visit" width="80%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/visit.png" alt="visit" width="60%"/>
 </p>
 
-
-The `order` table contains of ???
+The `order` table shows users transaction, date of purchase and the revenue they generated
 
 ```python
 order.sample(5)
 ```
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/order.png" alt="order" width="80%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/order.png" alt="order" width="60%"/>
 </p>
-
 
 The `cost` table contains of ???
 
