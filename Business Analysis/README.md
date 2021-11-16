@@ -7,7 +7,7 @@ customer brings, and when they pay off.
 Our analysis started with the data preprocessing step that included replacing missing values, removing duplicates, and converting data types.
 We got the three tables `visit`, `orders`, `cost` resulting from data cleaning. 
 
-The `visit` table contains logs of when users started logging in and when they ended the session, their user's id, and from which ad source they came to our site.
+The `visit` table contains user's id, logs of when users started logging in and whe they ended the session, and from which ad source they came to our site.
 
 ```python
 visit.sample(5)
