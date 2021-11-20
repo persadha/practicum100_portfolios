@@ -264,36 +264,43 @@ Other source that is also worthwhile to be considered is #5 where it scored 6.27
 
 ***
 
-Conclusion
-In this step, we found the following findings:
+## Conclusion
+In this step, we presented the following findings:
 
 Regarding user's visit:
-On average, there are 908 unique visits per day, 5716 per week, and 23228 per month.
-On the other hand, we can expect 987 sessions per day.
-There was a significant increase in a visit during the end-of-year holiday, particularly on Black Friday
-Most customers came to the site through ad source #3, #4, #5, and most of them using the desktop-based web interface.
-On average, users spends 10.7 minutes on the site
-There was a sudden drop in session length and daily visit indicating a problem on our end, possibly a server problem
-The cohorts formed at the end of the year, especially Dec-17, have the best user retention rate.
+
+* On average, there were 908 unique visits per day, 5,716 per week, and 23,228 per month.
+* On the other hand, we expected 987 sessions per day.
+* There was a significant increase in a visit during the end-of-year holiday, particularly on Black Friday.
+* Most customers came to the site through ad source #3, #4, #5, and most of them using the desktop-based web interface.
+* On average, users spent 10.7 minutes on the site.
+* There was a sudden drop in session length and daily visit indicating a problem on our end, possibly a server problem.
+* The cohorts formed at the end of the year, especially Dec-17, have the best user retention rate.
+
 Regarding sales:
-Among all visitors, only 16% converted into buying customers. Mor than half of them converted at 0 days, and the highest cohort that has 0d conversion was the Oct-17 cohort
-In terms of as source, source #3 and #4 had the highest 0d conversion
-The Jun-17 cohort consistently produces a high volume of orders even until its 9th month. Another cohort that potentially able to match them is the Mar-18 cohort.
-Ad source #1 and #2 produced large orders when compares to other sources.
-The cohort that has the highest LTV is the Jun-17 followed by Sep-17 cohort, while source #1 and source #2 also generated high LTV score with 320 and 360, respectively
+
+* Among all visitors, only 16% converted into buying customers. More than half of them converted at 0 days, and the highest cohort that has 0d conversion was the Oct-17 cohort
+* In terms of as source, source #3 and #4 had the highest 0d conversion
+* The Jun-17 cohort consistently produced high volume orders even until its 9th month. Another cohort that potentially able to match them was the Mar-18 cohort.
+* Ad source #1 and #2 produced large orders when compares to other sources.
+* The cohort that had the highest LTV is the Jun-17 followed by Sep-17 cohort, while source #1 and source #2 also generated high LTV score with 320 and 360, respectively.
+
+
 Regarding marketing:
-The overall marketing cost in a year is USD329131. Most of them are used by ad source #3.
-By evaluating the LTVs and CACs, we found out that ad source #1 and #2 are the most profitable, with ROMI of USD339 and USD1818, respectively.
-Step 4: General Conclusion
-We have learned from the analyses done in the previous step that the most profiting ad source is source #1. The source generated the highest return of investment (ROMI), USD339.94, with the lowest Customer Acquisition Costs (CAC), USD0.09 per user, and produced large volume orders. Ad source #2 also has a similar performance as #1, although on a smaller scale. On the other hand, source #3 has not been performing very well. Source #3 generated USD3.2 per user CAC, with the LTV only USD22, far below source #1 and #2.
 
-No cohorts that have ROMI greater than 1 which indicate we haven't generated enough revenue to cover the marketing costs. Only two cohorts, Jun-17 and Sep-17 have the highest ROMI 0.53 and 0.59 respectively.
+* The overall marketing cost in a year was USD329131. Most of them are used by ad source #3.
+* By evaluating the LTVs and CACs, we found out that ad source #1 and #2 are the most profitable, with ROMI of USD339 and USD1818, respectively.
 
-Hence, we recommend that marketing experts focus on ad sources #1 and #2 to increase revenue. It would be advisable to reallocate the marketing budget from source #3 to allow source v #1 to attract more customers.
 
-We would also like to suggest that the best time to launch the marketing campaign is from October to March, where user visits peaked.
+We have learned from the analyses above that the most profiting ad source is source #1. The source generated the highest return of investment (ROMI), USD339.94, with the lowest Customer Acquisition Costs (CAC), USD0.09 per user, and produced large volume orders. Ad source #2 also had a similar performance as #1, although on a smaller scale. On the other hand, source #3 had not been performing very well. Source #3 generated USD3.2 per user CAC, with the LTV only USD22, far below source #1 and #2.
 
-Black Friday is a unique date. In many of our metrics, the value around and on this day increased almost three times. So it is worthwhile to give extra attention to attract more users on this day
+No cohorts had ROMI greater than 1 which indicated we haven't generated enough revenue to cover the marketing costs. Only two cohorts, Jun-17 and Sep-17 had high ROMI of 0.53 and 0.59 respectively.
+
+Hence, we recommended that marketing experts *focus on ad sources #1 and #2* to increase revenue. It would be advisable to reallocate the marketing budget from source #3 to allow source #1 to attract more customers.
+
+We also suggested that the best time to *launch the marketing campaign was from October to March*, where user visits peaked.
+
+Black Friday is a unique date. In many of our metrics, the value around and on this day increased almost three times. So it is worthwhile to give extra attention to attract more users to spend on *Black Friday*.
 
 
 
