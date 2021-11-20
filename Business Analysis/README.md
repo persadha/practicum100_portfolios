@@ -79,7 +79,7 @@ mau = visits.groupby(['year', 'month']).agg({'uid':'nunique'}).reset_index()
 ```
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/mau.png" alt="mau" width="70%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/mau.png" alt="mau" width="60%"/>
 </p>
 
 On average, we expected 23,228 visitors per month. The WAU graphs agreed with the weekly trend we discussed earlier. Toward the end of the year, the number of visitors increased. The graphs peaked in November 2017, where Black Friday takes place.
