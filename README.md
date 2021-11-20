@@ -23,10 +23,6 @@ in the last section of the notebook.
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/)
 
 ***
-
-[Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/)
-
-***
 ## Business Analysis
 _Keywords: retention rate, conversion rate, LTV, CAC, ROMI_
 
