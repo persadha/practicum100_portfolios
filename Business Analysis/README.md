@@ -168,8 +168,7 @@ The weekly heatmap shows the peak, 48.11 orders per customer at the 8th week of 
 
 #### Lifetime Value (LTV)
 
-LTV is a ....
-
+LTV is the total amount of money a customer brings to the company on average by making purchases. When calculating LTV, analysts usually consider the gross profit from a customer per period.
 
 
 <p align="center">
@@ -216,7 +215,7 @@ To find the ROI, or rather, ROMI (Return On Marketing Investment), we merge two 
 </p>
 
 
-
+***
 
 Conclusion
 In this step, we found the following findings:
