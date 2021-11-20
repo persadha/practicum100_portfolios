@@ -296,11 +296,14 @@ We have learned from the analyses above that the most profiting ad source is sou
 
 No cohorts had ROMI greater than 1 which indicated we haven't generated enough revenue to cover the marketing costs. Only two cohorts, Jun-17 and Sep-17 had high ROMI of 0.53 and 0.59 respectively.
 
-Hence, we recommended that marketing experts *focus on ad sources #1 and #2* to increase revenue. It would be advisable to reallocate the marketing budget from source #3 to allow source #1 to attract more customers.
+Hence, we recommended that marketing experts **focus on ad sources #1 and #2** to increase revenue. It would be advisable to reallocate the marketing budget from source #3 to allow source #1 to attract more customers.
 
-We also suggested that the best time to *launch the marketing campaign was from October to March*, where user visits peaked.
+We also suggested that the best time to **launch the marketing campaign was from October to March**, where user visits peaked.
 
-Black Friday is a unique date. In many of our metrics, the value around and on this day increased almost three times. So it is worthwhile to give extra attention to attract more users to spend on *Black Friday*.
+Black Friday is a unique date. In many of our metrics, the value around and on this day increased almost three times. So it is worthwhile to give extra attention to attract more users to spend on **Black Friday**.
+
+
+The complete notebook can be accessed [here](https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/Business%20Analysis.ipynb).
 
 
 
