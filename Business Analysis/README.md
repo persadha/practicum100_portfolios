@@ -1,4 +1,4 @@
-v# Business Analysis
+# Business Analysis
 
 ## Overview
 This project focused on analyzing metrics in an ad campaign. The data that we had in hand were marketing expenses, server logs from June 2017 to May 2018, and orders for the period. Given these data, we would like to know how effective was our advertisement strategy and how much revenue it generated. We would also like to answer related questions such as know how people usede the product, when they start to buy, how much money each
