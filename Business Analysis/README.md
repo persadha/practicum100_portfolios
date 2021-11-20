@@ -179,12 +179,15 @@ The month with the highest orders per customer was May-18.
 
 #### Lifetime Value (LTV)
 
-LTV is the total amount of money a customer brings to the company on average by making purchases. In this case we calculated the LTV by dividing the revenue with the size of each cohort.
+LTV is the total amount of money a customer brings to the company on average by making purchases. 
+In this case we calculated the LTV by dividing the revenue with the size of each cohort. 
+LTV commonly presented in cumulative units to express how much revenue each cohort bring over time.
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/LTV.png" alt="LTV" width="70%"/>
 </p>
 
+The cumulative LTV showed that cohort Jun-17 and Sep-17 had the highest score. It means users on each cohort brought 5.94 and 6.72 revenues respectively.
 
 #### How much money was spent? Overall/per source/over time
 This time we are looking at the `marketing` table
