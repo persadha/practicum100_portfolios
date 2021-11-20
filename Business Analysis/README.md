@@ -146,6 +146,7 @@ We broke down the metrics even more to see which ad source that brought the most
 Users that came to the site from ad source #3 and #4 are the group that most converted.
 
 #### How Many Orders In A Given Period of Time?
+It is also interesting to found out how many orders users made daily, weekly and monthly,
 
 ```python
 # Calculating number of purchase per customer
@@ -157,36 +158,28 @@ Users that came to the site from ad source #3 and #4 are the group that most con
 ```
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/average_order.png" alt="average_order" width="70%"/>
-</p>
-The average order per customer is 1.38
-
-The daily heatmap shows that daily orders are usually at around 1.08-1.10 rate. However, there are days that the rate increased to above 1.20 in August-17 and March-18.
-
-<p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/daily_order.png" alt="daily_order" width="70%"/>
 </p>
 
-
-The daily heatmap shows that daily orders are usually at around 1.08-1.10 rate. However, there are days that the rate increased to above 1.20 in August-17 and March-18.
+The average order per customer is 1.38. The daily heatmap showed that daily orders were usually at around 1.08-1.10 rate. However, there were days that the rate increased to above 1.20 in August-17 and March-18.
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/weekly_order.png" alt="weekly_order" width="70%"/>
 </p>
 
+The weekly heatmap showed the peak, 48.11 orders per customer at the 8th week of 2018. That occurred at Feb 19-25, 2018. 
 
-
-The weekly heatmap shows the peak, 48.11 orders per customer at the 8th week of 2018. That occurred at Feb 19-25, 18.
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/monthly_order.png" alt="monthly_order" width="70%"/>
 </p>
+
+The month with the highest orders per customer was May-18.
 
 ***
 
 #### Lifetime Value (LTV)
 
-LTV is the total amount of money a customer brings to the company on average by making purchases. When calculating LTV, analysts usually consider the gross profit from a customer per period.
-
+LTV is the total amount of money a customer brings to the company on average by making purchases. In this case we calculated the LTV by dividing the revenue with the size of each cohort.
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/LTV.png" alt="LTV" width="70%"/>
