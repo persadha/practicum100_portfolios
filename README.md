@@ -24,18 +24,13 @@ in the last section of the notebook.
 
 ***
 
-## Making Business Decision Based on Data
-The focis of this prokect is 
-
-In this data we did
-
-
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/)
 
 ***
 ## Business Analysis
+_Keywords: SDA, EDA, hypothesis testing_
 
-
+The Business Analysis project focuses on how to calculate and analyze standard business metrics such as daily, weekly, monthly average users (DAU/WAU/MAU), retention rates, conversion rates, lifetime value (LTV), customers acquisition cost (CAC),  and return of marketing investment (ROMI). The data used was users' visits, number of orders, and marketing expenses for the given period. Finally, reccommednatinos based on the analysis were presented as a conclusion.
 
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/)
 
@@ -44,8 +39,7 @@ In this data we did
 _Keywords: SDA, EDA, hypothesis testing_
 
 This project works on video games sales data that contains the number of sales of games from 31 different gaming platforms (PlayStation 2, 
-Nintendo DS, XBox 360, PC console, etc.) in North America, Europe, Japan, and other regions.
-We wanted to find out interesting business-related questions such as the best-selling games of all time, which platform is leading sales, and the most profitable genre in each region. We also wanted to find out how different users critics in different genres and platforms with hypotheses test.
+Nintendo DS, XBox 360, PC console, etc.) in North America, Europe, Japan, and other regions. We analyzed the data to determine the best-selling games of all time, which platform is leading sales, and the most profitable genre in each region. Additionally, using hypothesis test, We also wanted to know how users' critics affect sales in different genres and platforms. 
 
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/)
 
