@@ -189,16 +189,32 @@ LTV commonly presented in cumulative units to express how much revenue each coho
 
 The cumulative LTV showed that cohort Jun-17 and Sep-17 had the highest score. It means users on each cohort brought 5.94 and 6.72 revenues respectively.
 
+We could also evaluate the LTV per ad source,
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/LTV_per_source.png" alt="LTV" width="70%"/>
+</p>
+
+Ad source #1 and #2 brought the most revenue with USD320 and USD363 per user, respectively. There was also a peak on source #2 in Dec-2017, where the LTV was USD94 per user.
+
 #### How much money was spent? Overall/per source/over time
+We found out how much we money spent per month or per ad source as a step to calculate the customer acquisition cost (CAC), which we will calculate after this.
 This time we are looking at the `marketing` table
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/monthly_costs.png" alt="monthly_costs" width="70%"/>
 </p>
 
+
+We can see above the marketing cost spent for each month. The overall cost for the whole year was USD329,131. 
+The highest expenses paid were on October, November, and December, possibly to anticipate autumn and winter school breaks, as well as the Black Friday, Christmas, and New Year holidays.
+
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/source_costs.png" alt="source_source" width="70%"/>
 </p>
+
+We paid USD141,321 on source #3, almost double the amount of money spent on other channels and take almost 43% of the marketing expenses. On the other hand, we only spent USD5500-5800 on source #9, #10.
+
 
 #### How much did customer acquisition from each of the sources cost (Customer Acquisition Costs)?
 
