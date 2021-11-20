@@ -30,7 +30,7 @@ in the last section of the notebook.
 ## Business Analysis
 _Keywords: SDA, EDA, hypothesis testing_
 
-The Business Analysis project focuses on how to calculate and analyze standard business metrics such as daily, weekly, monthly average users (DAU/WAU/MAU), retention rates, conversion rates, lifetime value (LTV), customers acquisition cost (CAC),  and return of marketing investment (ROMI). The data used was users' visits, number of orders, and marketing expenses for the given period. Finally, reccommednatinos based on the analysis were presented as a conclusion.
+The Business Analysis project focuses on how to calculate and analyze standard business metrics such as daily, weekly, monthly average users (DAU/WAU/MAU), retention rates, conversion rates, lifetime value (LTV), customers acquisition cost (CAC),  and return of marketing investment (ROMI). The data used was users' visits, number of orders, and marketing expenses for the given period. Finally, recommendataions based on the analysis were presented as a conclusion.
 
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/)
 
