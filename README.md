@@ -3,22 +3,12 @@
 ## Evaluating Sales KPI and Product Range Analysis
 The final project of the Practicum100 Germany Data Analyst Bootcamp.
 
-The project's main task was to do a KPI and project range 
-analysis to see how sales are performing in a year. 
-In this project, I used different techniques to clean and 
-visualize the dataset. As a part of the task, we were 
-asked to put the product items into larger groups. 
+The main task was to do a key performance indicator (KPI) and project range analysis of annual sales. In this project, we used different techniques to were used to clean and visualize the dataset. As part of the task, we attempted to categorize the items into larger groups and identify those commonly sold individually and those in bundles. 
 
-I used the Topic Modelling techniques to find the most 
-common product categories using the item's description 
-as an input. The final number of categories was chosen 
-by evaluating the coherence value of a given range of the 
-possible number of topics. 
+We used the Topic Modelling techniques to find the most common product categories using the item's description as an input. We chose the final number of categories by evaluating the coherence value of a
+given range of the possible number of topics. 
 
-I also did hypothesis testing 
-to check the statistical significance between two groups 
-in the dataset. Finally, recommendations were presented 
-in the last section of the notebook.
+Later on, we conducted hypothesis testing to check whether the items commonly sold in bundles generate more revenue than those sold individually. Finally, We presented recommendations based on our findinsin the last section of the notebook.
 
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/KPI%20and%20Product%20Range%20Analysis/)
 
