@@ -39,7 +39,9 @@ Nintendo 3DS in Japan with $34 million.
 Customers in North America and Europe prefer Action, shooters, and Sports games as those dominate the market almost with 60% share. 
 In Japan, Role-Playing Games are the most popular, followed by Action with a total combined 50% market share.
 
+<p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/images/genres_in_different_regions.png" alt="data_description" width="90%"/>
+</p>
 
 The last section compared the average user's review score between Xbox and PC 
 and between the Action and sports genres. Using hypothesis testing between the two distribution means, we found out that there were no significant differences between the Xbox user's reviews to that of PC's. On the other hand, 
