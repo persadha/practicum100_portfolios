@@ -243,15 +243,23 @@ From the chart above, we saw that ad source #3 has the highest CAC. We spent USD
 
 #### How worthwhile where the investments? (ROMI)
 
-To find the ROI, or rather, ROMI (Return On Marketing Investment), we merge two dataframes that have cac and ltv columns which are cac and source dataframes,
+Finally, we came to the most important metric in this analysis, the return of investment or in this case the return of marketing investment (ROMI).
+It is the amount of LTV divided over CAC. Using this metric we can conclude whether our business activity is a worthwhile investments or not. 
+Ideally we would like to see the ROMI of greater than 1.
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/ROMI_cohort.png" alt="ROMI_cohort" width="70%"/>
 </p>
 
+From the ROMI heatmap we can conclude that no cohort that indicates a good investment, since most ROMI are below 1.
+
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/ROMI_source.png" alt="ROMI_source" width="70%"/>
 </p>
+
+The table suggested that focusing our effort on ad source #1 and # 2 is a key to increase our revenue in the future. 
+The ROMI values of these source far exceed the other sources where source #1 scored 21.97 and source #2 16.74. 
+Other source that is also worthwhile to be considered is #5 where it scored 6.27 showing a relatively strong performance.
 
 
 ***
