@@ -126,12 +126,24 @@ The second-week retention for the first six weeks showed a relatively stable tre
 
 The retention rate heatmap also showed us that most cohorts increased their rate in the 2nd month. Although not true for every cohort, generally, the retention rate rose steadily, especially for end-of-year cohorts where the number of retention improved.
 
+***
+
 #### When Do People Start Buying (Conversion Rate)
+Conversion rate is the measure of how many users actually purchase our service over the number of users who visited the site.
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/user_conversion.png" alt="user_conversion" width="70%"/>
 </p>
 
+The above graph showed that 25039 users put their orders right away after their first visit. One thousand nine hundred sixty-six users waited one day before making their purchase. Similarly, 58 users came back after a month, 41 users after 60 days, and so on.
+The fact that most of the users converted on day one indicates that we had a strong product offering that attract users.
+We broke down the metrics even more to see which ad source that brought the most revenue in.
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/conversion_per_source.png" alt="user_conversion" width="70%"/>
+</p>
+
+Users that came to the site from ad source #3 and #4 are the group that most converted.
 
 #### How Many Orders In A Given Period of Time?
 
