@@ -16,7 +16,7 @@ Later on, we conducted hypothesis testing to check whether the items commonly so
 ## Business Analysis
 _Keywords: retention rate, conversion rate, LTV, CAC, ROMI_
 
-The Business Analysis project focuses on how to calculate and analyze standard business metrics such as daily, weekly, monthly average users (DAU/WAU/MAU), retention rates, conversion rates, lifetime value (LTV), customers acquisition cost (CAC),  and return of marketing investment (ROMI). The data used was users' visits, number of orders, and marketing expenses for the given period. Finally, recommendations based on the analysis were presented as a conclusion.
+The Business Analysis project focuses on how to calculate and analyze standard business metrics such as daily, weekly, monthly average users (DAU/WAU/MAU), retention rates, conversion rates, lifetime value (LTV), customers acquisition cost (CAC),  and return of marketing investment (ROMI). We would like to know how effective is our advertisement strategy and how much revenue it generates. The data used were server logs of users' visits, number of orders, and marketing expenses for the given period. Finally, recommendations based on the analysis were presented as a conclusion.
 
 [Link to project](https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/)
 
