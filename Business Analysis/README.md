@@ -83,6 +83,7 @@ mau = visits.groupby(['year', 'month']).agg({'uid':'nunique'}).reset_index()
 </p>
 
 On average, we expected 23,228 visitors per month. The WAU graphs agreed with the weekly trend we discussed earlier. Toward the end of the year, the number of visitors increased. The graphs peaked in November 2017, where Black Friday takes place.
+
 ***
 #### Sessions per Day
 One user can visit the website more than once. With that in mind, we would like to know how many sessions per day from all users. 
@@ -169,7 +170,9 @@ The weekly heatmap shows the peak, 48.11 orders per customer at the 8th week of 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/monthly_order.png" alt="monthly_order" width="70%"/>
 </p>
+
 ***
+
 #### Lifetime Value (LTV)
 
 LTV is the total amount of money a customer brings to the company on average by making purchases. When calculating LTV, analysts usually consider the gross profit from a customer per period.
