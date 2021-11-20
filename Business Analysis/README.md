@@ -71,7 +71,7 @@ wau = visits.groupby(['year', 'week']).agg({'uid':'nunique'}).reset_index()
 
 On average, we expected 5716 visits every week. However, we saw the same occurrence at the 47th week in 2017, where the visit suddenly jumped out. The number of visits stayed high throughout the end of 2017. There was an increase in the 12th week of 2018, which coincides with school spring break until it dropped to not much more than 5740 visits per week.
 
-Finally the monthly average user,
+Finally, the monthly average user,
 
 ```python
 # Grouping the dataframe on week and calculating the number of unique users
@@ -96,9 +96,7 @@ session = visits.groupby(['year', 'month', 'day']).agg({'uid':'count'}).reset_in
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/daily_sessions.png" alt="daily_sessions" width="70%"/>
 </p>
 
-The number of sessions per day is 987.4
-
-Previously we found out that the number of unique daily users was 908 visitors. On the other hand, the average daily session was 987.4. We calculated the ratio of n_unique visitors and the daily session and saw how it behave throughout the year.
+The number of sessions per day is 987.4. On the previous step, we found out that the number of unique daily users was 908 visitors. On the other hand, the average daily session was 987.4. We calculated the ratio of `n_unique` visitors and the daily session and saw how it behaved throughout the year,
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/daily_sessions_ratio.png" alt="daily_sessions_ratio" width="70%"/>
@@ -106,7 +104,7 @@ Previously we found out that the number of unique daily users was 908 visitors. 
 
 Generally, the ratio of sessions over the visit was 1.08. In other words, eight users visited the website two times in one hundred users. This was a pretty small amount, so we could confidently say that users only saw the site once on regular days. However, during high season the percentage could reach 1.22.
 
-Looking at the heatmap above, we see that ad source #3, #4, and #5 brought the most visitors to the site. At the end of the year, source #4 made the highest visit with 13144 sessions. On the other hand, source #7 performed poorly by attracting not more than nine sessions in a month.
+Looking at the heatmap above, we saw that ad source #3, #4, and #5 brought the most visitors to the site. At the end of the year, source #4 made the highest visit with 13144 sessions. On the other hand, source #7 performed poorly by attracting not more than nine sessions in a month.
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/sessions_per_source.png" alt="sessions_per_source" width="70%"/>
@@ -116,17 +114,17 @@ Looking at the heatmap above, we see that ad source #3, #4, and #5 brought the m
 
 #### How Often Do Users Come Back (Retention Rate)
 
-The retention rate is defined as the number of active users at different periods divided by the initial 
-size of the same group. This metric is particulary useful if we offer a subscribtion based service. It can give
-us hint of how loyal our customers are
+Retention rate is defined as the number of active users at different periods divided by the initial 
+size of the same group. This metric is particularly useful in a subscription based service. It can give
+us hint of how loyal our customers are.
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/retention.png" alt="retention" width="70%"/>
 </p>
 
-The second-week retention for the first six weeks shows a relatively stable trend, despite the drop in Jul-17, with at least a 7.7% rate. At the beginning of the new year, the retention rate dropped around 2 percent lower to the level between 4.2-6.0%. The end of the festive season might cause this decrease where people returned to their normal daily activities.
+The second-week retention for the first six weeks showed a relatively stable trend, despite the drop in Jul-17, with at least a 7.7% rate. At the beginning of the new year, the retention rate dropped around 2 percent lower to the level between 4.2-6.0%. The end of the festive season might caused this decrease where people returned to their normal daily activities.
 
-The retention rate heatmap shows us that most cohorts increased their rate in the 2nd month. Additionally, although not valid for every cohort, generally, the retention rate rises steadily, especially for end-of-year cohorts where the number of retention improves.
+The retention rate heatmap also showed us that most cohorts increased their rate in the 2nd month. Although not true for every cohort, generally, the retention rate rose steadily, especially for end-of-year cohorts where the number of retention improved.
 
 #### When Do People Start Buying (Conversion Rate)
 
