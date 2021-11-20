@@ -218,18 +218,28 @@ We paid USD141,321 on source #3, almost double the amount of money spent on othe
 
 #### How much did customer acquisition from each of the sources cost (Customer Acquisition Costs)?
 
-CAC Source
+The Customer Acquisition Cost tells us how much we spent on marketing budget to get a single customer. 
+The value is the ratio between marketing costs and the number of customers who made an order over the same period.
+It is an indication of how effective our spending strategy.
 
-<p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/CAC_source.png" alt="CAC_source" width="70%"/>
-</p>
-
-CAC Cohort
+In the same way as the above analyses, we evaluated the CAC based on cohort and ad source,
 
 <p align="center">
 <img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/CAC_cohort.png" alt="CAC_cohort" width="70%"/>
 </p>
 
+
+The heatmap showed the CAC over period of one year evaluated every month. 
+On the 12th month source #3 absorbed USD141321.63 and only gained USD46766 to get the CAC of USD38.4 per user. 
+Compare this to source #1 where it attracted 248662 users at the same period for only USD20833.27.
+
+Calculating the CAC per ad source,
+
+<p align="center">
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Business%20Analysis/images/CAC_source.png" alt="CAC_source" width="70%"/>
+</p>
+
+From the chart above, we saw that ad source #3 has the highest CAC. We spent USD3 to get a single customer. The most effective channel is source #1, where we needed only to pay less than 1 cent to attract new customers.
 
 #### How worthwhile where the investments? (ROMI)
 
