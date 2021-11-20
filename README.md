@@ -2,6 +2,7 @@
 
 ## Evaluating Sales KPI and Product Range Analysis
 _Keywords: KPI analysis, Topic Modelling, coherence value, hypothesis testing, recommender system._
+
 The final project of the Practicum100 Germany Data Analyst Bootcamp.
 
 The main task was to do a key performance indicator (KPI) and project range analysis of annual sales. In this project, we used different techniques to were used to clean and visualize the dataset. As part of the task, we attempted to categorize the items into larger groups and identify those commonly sold individually and those in bundles. 
