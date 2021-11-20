@@ -13,7 +13,7 @@ The column titles are `Name`, `Platform`, `Year_of_Release`, `Genre`, `NA_sales`
 Additional data preprocessing concluded that only 43% of the original data were usable for analysis.
 
 <p align="center">
-<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/images/data_descriptions.png" alt="data_description" width="75%"/>
+<img src="https://github.com/persadha/practicum100_portfolios/blob/main/Video%20Game%20Analysis/images/data_description.png" alt="data_description" width="75%"/>
 </p>
 
 Our data exploration showed us that PlayStation2 was the platform that had the highest-selling figures and made the
